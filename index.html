@@ -182,7 +182,6 @@
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="studio">Studio Work</button>
       <button class="filter-btn" data-filter="personal">Personal Work</button>
-      <button class="filter-btn" data-filter="personal">Album Art</button>
     </div>
     <div class="grid" id="projectGrid"></div>
   </div>
@@ -519,7 +518,7 @@ function renderProjectGrid(){
       const thumbSrc = project.images[0].src || 'https://placehold.co/600x600/191816/8C877D?text=Add+Image';
       card.innerHTML = `
         <div class="project-thumb">
-          <div class="tag">${project.category === 'personal' ? 'Personal' : 'Album' ? 'Studio'}</div>
+          <div class="tag">${project.category === 'personal' ? 'Personal' : 'Studio'}</div>
           <img src="${thumbSrc}" alt="${project.title}">
           ${project.images.length > 1 ? `<div class="count">${project.images.length} pieces</div>` : ''}
         </div>
