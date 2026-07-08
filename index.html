@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Surendra Rajawat — Concept Artist</title>
-<meta name="description" content="Portfolio of Surendra Rajawat — Concept Artist.">
+<meta name="description" content="Portfolio of Surendra Rajawat — Concept Artist, Rajawats Studio LLC.">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #121110; --bg-raised: #191816;
+    --bg: #121110; --bg-raised: #191816; --bg-raised-2:#1F1E1B;
     --ink: #ECE7DE; --ink-dim: #8C877D; --line: #2B2925;
     --accent: #C9A369; --accent-dim: #8C734A;
   }
@@ -23,21 +24,32 @@
   img{ display:block; max-width:100%; }
 
   /* Nav */
-  .nav{ position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; padding:1.5rem 4vw; z-index:100; background:rgba(18,17,16,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
-  .nav-mark{ font-family:'Fraunces', serif; font-size:1.05rem; }
-  .nav-links{ display:flex; gap:2.25rem; list-style:none; }
-  .nav-links button{ background:none; border:none; cursor:pointer; font-family:'Work Sans',sans-serif; color:var(--ink); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; padding:0; position:relative; padding-bottom:4px; }
+  .nav{ position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; padding:1rem 4vw; z-index:100; background:rgba(18,17,16,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); flex-wrap:wrap; gap:1rem; }
+  .nav-mark{ display:flex; align-items:center; }
+  .nav-mark img{ height:38px; width:auto; }
+  .nav-links{ display:flex; gap:1.75rem; list-style:none; flex-wrap:wrap; }
+  .nav-links button{ background:none; border:none; cursor:pointer; font-family:'Work Sans',sans-serif; color:var(--ink); font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; padding:0; position:relative; padding-bottom:4px; }
   .nav-links button::after{ content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--accent); transition:width .3s ease; }
   .nav-links button:hover::after, .nav-links button.active::after{ width:100%; }
   .nav-links button.active{ color:var(--accent); }
 
   /* Header */
-  .header{ padding:5rem 4vw 3.5rem; border-bottom:1px solid var(--line); }
+  .header{ padding:4rem 4vw 3rem; border-bottom:1px solid var(--line); }
   .header h1{ font-family:'Fraunces', serif; font-weight:500; font-size:clamp(2.4rem, 6vw, 4rem); letter-spacing:-.01em; }
   .header .subtitle{ margin-top:.6rem; font-family:'JetBrains Mono', monospace; font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); }
 
   .tab-panel{ display:none; padding:3.5rem 4vw 5rem; max-width:1400px; margin:0 auto; }
   .tab-panel.active{ display:block; }
+
+  .section-label{ font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); margin-bottom:.75rem; }
+  .section-label::before{ content:'— '; color:var(--accent-dim); }
+  .section-title{ font-family:'Fraunces', serif; font-weight:500; font-size:1.8rem; margin-bottom:2.5rem; }
+
+  /* Work: filter bar */
+  .filter-bar{ display:flex; gap:1.75rem; margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem; flex-wrap:wrap; }
+  .filter-btn{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono', monospace; color:var(--ink-dim); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; padding:0 0 4px; border-bottom:1px solid transparent; }
+  .filter-btn:hover{ color:var(--ink); }
+  .filter-btn.active{ color:var(--accent); border-color:var(--accent); }
 
   /* Work grid */
   .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:1.25rem; }
@@ -46,15 +58,71 @@
   .project-thumb img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
   .project-card:hover .project-thumb img{ transform:scale(1.06); }
   .project-thumb .count{ position:absolute; top:.6rem; right:.6rem; font-family:'JetBrains Mono', monospace; font-size:.62rem; background:rgba(18,17,16,.75); border:1px solid var(--line); padding:.25rem .5rem; color:var(--ink-dim); }
+  .project-thumb .tag{ position:absolute; top:.6rem; left:.6rem; font-family:'JetBrains Mono', monospace; font-size:.6rem; letter-spacing:.06em; text-transform:uppercase; background:rgba(18,17,16,.75); border:1px solid var(--accent-dim); color:var(--accent); padding:.25rem .5rem; }
   .project-info{ padding:.85rem .1rem 0; }
   .project-info .title{ font-family:'Fraunces', serif; font-size:1.05rem; }
   .project-info .meta{ font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-dim); margin-top:.25rem; }
 
+  /* Project detail (inline, replaces grid — no popup) */
+  .project-detail{ display:none; }
+  .project-detail.active{ display:block; }
+  .back-link{ display:inline-flex; align-items:center; gap:.5rem; font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); margin-bottom:2rem; cursor:pointer; background:none; border:none; }
+  .back-link:hover{ color:var(--accent); }
+  .detail-head{ border-bottom:1px solid var(--line); padding-bottom:1.5rem; margin-bottom:2rem; }
+  .detail-head .title{ font-family:'Fraunces', serif; font-size:1.7rem; }
+  .detail-head .meta{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-dim); margin-top:.5rem; }
+
+  .artwork-stack{ display:flex; flex-direction:column; gap:2px; background:var(--line); }
+  .artwork-thumb{ cursor:zoom-in; background:var(--bg-raised-2); }
+  .artwork-thumb .frame{ position:relative; background:var(--bg-raised); overflow:hidden; }
+  .artwork-thumb img{ width:100%; height:auto; display:block; transition:transform .45s ease; }
+  .artwork-thumb:hover img{ transform:scale(1.02); }
+  .artwork-thumb .cap{ padding:.9rem 1.1rem; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:var(--ink-dim); letter-spacing:.03em; }
+
+  /* Lightbox */
+  .lightbox{ position:fixed; inset:0; z-index:1100; background:rgba(6,6,5,.98); display:none; align-items:center; justify-content:center; padding:4vh 4vw; }
+  .lightbox.open{ display:flex; }
+  .lightbox-inner{ position:relative; max-width:1100px; width:100%; }
+  .lightbox img{ max-width:100%; max-height:80vh; object-fit:contain; margin:0 auto; box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .lightbox-caption{ text-align:center; margin-top:1rem; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:var(--ink-dim); letter-spacing:.04em; }
+  .lightbox-close{ position:absolute; top:-2.5rem; right:0; font-family:'JetBrains Mono', monospace; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); cursor:pointer; }
+  .lightbox-close:hover{ color:var(--accent); }
+  .lightbox-nav{ position:absolute; top:50%; transform:translateY(-50%); font-family:'JetBrains Mono', monospace; font-size:1.4rem; color:var(--ink-dim); cursor:pointer; background:rgba(18,17,16,.6); border:1px solid var(--line); width:44px; height:44px; display:flex; align-items:center; justify-content:center; }
+  .lightbox-nav:hover{ color:var(--accent); border-color:var(--accent); }
+  .lightbox-prev{ left:-1rem; } .lightbox-next{ right:-1rem; }
+  .lightbox-nav[hidden]{ display:none; }
+
+  /* Cinematics */
+  .video-list{ display:flex; flex-direction:column; gap:3rem; }
+  .video-card{ display:grid; grid-template-columns:1.4fr 1fr; gap:2rem; align-items:start; border-bottom:1px solid var(--line); padding-bottom:3rem; }
+  .video-frame{ position:relative; aspect-ratio:16/9; background:var(--bg-raised); overflow:hidden; border:1px solid var(--line); }
+  .video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .video-text .v-title{ font-family:'Fraunces', serif; font-size:1.2rem; margin-bottom:.6rem; }
+  .video-text .v-desc{ color:var(--ink-dim); font-size:.92rem; margin-bottom:1rem; }
+  .video-text .v-credit{ font-family:'JetBrains Mono', monospace; font-size:.68rem; color:var(--ink-dim); letter-spacing:.04em; line-height:1.9; }
+  .video-text .v-credit b{ color:var(--ink); font-weight:500; }
+
+  /* Videography grid */
+  .video-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem; }
+  .video-grid .video-frame{ margin-bottom:.6rem; }
+  .video-grid .v-title{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-dim); }
+
   /* About */
   .about-body p{ max-width:64ch; color:var(--ink-dim); margin-bottom:1.25rem; font-size:1.05rem; }
   .about-body strong{ color:var(--ink); font-weight:500; }
-  .about-figure{ margin-top:2.5rem; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:var(--ink-dim); line-height:2; }
-  .about-figure b{ color:var(--ink); font-weight:500; }
+
+  .experience-card{ border:1px solid var(--line); background:var(--bg-raised); padding:2rem; margin-top:1rem; }
+  .exp-row{ display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; margin-bottom:1.25rem; }
+  .exp-item b{ display:block; font-family:'JetBrains Mono', monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-dim); margin-bottom:.3rem; }
+  .exp-item span{ font-family:'Fraunces', serif; font-size:1.05rem; }
+  .exp-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem; }
+  .tag-pill{ font-family:'JetBrains Mono', monospace; font-size:.66rem; letter-spacing:.04em; border:1px solid var(--line); color:var(--ink-dim); padding:.35rem .7rem; }
+
+  .skills-grid{ display:flex; flex-wrap:wrap; gap:1rem; margin-top:1rem; }
+  .skill-badge{ display:flex; align-items:center; gap:.75rem; border:1px solid var(--line); background:var(--bg-raised); padding:.75rem 1.1rem; }
+  .skill-badge .mono{ width:32px; height:32px; border:1px solid var(--accent-dim); color:var(--accent); font-family:'Fraunces', serif; font-size:1rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .skill-badge span{ font-family:'JetBrains Mono', monospace; font-size:.78rem; letter-spacing:.03em; }
+  .skills-note{ margin-top:1.25rem; font-size:.82rem; color:var(--ink-dim); max-width:60ch; }
 
   /* Contact */
   .contact-mail{ font-family:'Fraunces', serif; font-size:clamp(1.6rem, 4vw, 2.75rem); font-weight:500; display:inline-block; position:relative; width:fit-content; }
@@ -64,28 +132,26 @@
   .socials a{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); border-bottom:1px solid transparent; }
   .socials a:hover{ color:var(--ink); border-color:var(--accent); }
 
+  .contact-form{ max-width:560px; margin-top:2.5rem; }
+  .field{ margin-bottom:1.5rem; }
+  .field label{ display:block; font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-dim); margin-bottom:.6rem; }
+  .field input, .field textarea{ width:100%; background:var(--bg-raised); border:1px solid var(--line); color:var(--ink); font-family:'Work Sans', sans-serif; font-size:.95rem; padding:.85rem 1rem; resize:vertical; }
+  .field input:focus, .field textarea:focus{ outline:none; border-color:var(--accent); }
+  .submit-btn{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; background:transparent; border:1px solid var(--accent); color:var(--accent); padding:.9rem 1.75rem; cursor:pointer; transition:background .3s ease, color .3s ease; }
+  .submit-btn:hover{ background:var(--accent); color:var(--bg); }
+  .form-note{ font-size:.8rem; color:var(--ink-dim); max-width:50ch; margin-top:1rem; }
+
   footer{ padding:2.5rem 4vw; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-family:'JetBrains Mono', monospace; font-size:.65rem; color:var(--ink-dim); border-top:1px solid var(--line); }
 
-  /* Modal gallery */
-  .modal{ position:fixed; inset:0; z-index:1000; background:rgba(10,9,8,.96); display:none; align-items:center; justify-content:center; padding:4vh 4vw; }
-  .modal.open{ display:flex; }
-  .modal-inner{ position:relative; max-width:1100px; width:100%; }
-  .modal img{ max-width:100%; max-height:80vh; object-fit:contain; margin:0 auto; box-shadow:0 20px 60px rgba(0,0,0,.5); }
-  .modal-caption{ text-align:center; margin-top:1rem; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:var(--ink-dim); letter-spacing:.04em; }
-  .modal-caption span{ color:var(--ink); font-family:'Work Sans',sans-serif; font-size:.9rem; }
-  .modal-close{ position:absolute; top:-2.5rem; right:0; font-family:'JetBrains Mono', monospace; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); cursor:pointer; }
-  .modal-close:hover{ color:var(--accent); }
-  .modal-nav{ position:absolute; top:50%; transform:translateY(-50%); font-family:'JetBrains Mono', monospace; font-size:1.4rem; color:var(--ink-dim); cursor:pointer; background:rgba(18,17,16,.6); border:1px solid var(--line); width:44px; height:44px; display:flex; align-items:center; justify-content:center; }
-  .modal-nav:hover{ color:var(--accent); border-color:var(--accent); }
-  .modal-prev{ left:-1rem; }
-  .modal-next{ right:-1rem; }
-  .modal-nav[hidden]{ display:none; }
-
+  @media (max-width:900px){
+    .video-card{ grid-template-columns:1fr; }
+  }
   @media (max-width:760px){
-    .nav-links{ gap:1.1rem; }
-    .header{ padding:3.5rem 6vw 2.5rem; }
+    .nav{ padding:1rem 6vw; }
+    .nav-links{ gap:1rem; }
+    .header{ padding:3rem 6vw 2rem; }
     .tab-panel{ padding:2.5rem 6vw 4rem; }
-    .modal-prev{ left:0; } .modal-next{ right:0; }
+    .lightbox-prev{ left:0; } .lightbox-next{ right:0; }
   }
   a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
 </style>
@@ -93,9 +159,11 @@
 <body>
 
 <nav class="nav">
-  <div class="nav-mark">Rajawats Studio LLC</div>
+  <a class="nav-mark" href="#" data-tab="work"><img src="images/logo.jpg" alt="Rajawats Studio"></a>
   <ul class="nav-links">
     <li><button data-tab="work" class="active">Work</button></li>
+    <li><button data-tab="cinematics">Cinematics</button></li>
+    <li><button data-tab="videography">Videography</button></li>
     <li><button data-tab="about">About</button></li>
     <li><button data-tab="contact">Contact</button></li>
   </ul>
@@ -106,28 +174,93 @@
   <div class="subtitle">Concept Artist</div>
 </div>
 
-<!-- WORK -->
+<!-- ============ WORK ============ -->
 <div class="tab-panel active" id="panel-work">
-  <div class="grid" id="projectGrid"></div>
+
+  <div id="workGridView">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="studio">Studio Work</button>
+      <button class="filter-btn" data-filter="personal">Personal Work</button>
+    </div>
+    <div class="grid" id="projectGrid"></div>
+  </div>
+
+  <div class="project-detail" id="projectDetail">
+    <button class="back-link" id="backToWork">← Back to Work</button>
+    <div class="detail-head">
+      <div class="title" id="detailTitle"></div>
+      <div class="meta" id="detailMeta"></div>
+    </div>
+    <div class="artwork-stack" id="artworkGrid"></div>
+  </div>
+
 </div>
 
-<!-- ABOUT -->
+<!-- ============ CINEMATICS ============ -->
+<div class="tab-panel" id="panel-cinematics">
+  <div class="section-label">Selected Cinematics</div>
+  <div class="video-list" id="cinematicsList"></div>
+</div>
+
+<!-- ============ VIDEOGRAPHY ============ -->
+<div class="tab-panel" id="panel-videography">
+  <div class="section-label">Travel Videography</div>
+  <p style="color:var(--ink-dim); max-width:60ch; margin-bottom:2.5rem;">A collection of travel clips from places visited.</p>
+  <div class="video-grid" id="videographyGrid"></div>
+</div>
+
+<!-- ============ ABOUT ============ -->
 <div class="tab-panel" id="panel-about">
   <div class="about-body">
-    <p><strong>About me.</strong></p>
-    <p>Rajawats Studio LLC:</p>
-    <p>Specialize in the creation of "Environment Concept Art, Visual Development, Props design, illustration, Low Poly Modeling, Lighting and Texturing, " for video games and film industry.</p>
-    <p>Please use below email ID for work and business inquiry: s.rajawat@live.com</p>
-    
+    <p><strong>About me.</strong> Concept artist and background painter based in Dubai, UAE, working across game cinematics, trailers, and advertising campaigns for studios worldwide.</p>
+    <p>Replace this paragraph with more on your process, tools, or what you're looking for next.</p>
   </div>
-  <div class="about-figure">
-    <div><b>Skills</b> — Concept Art, illustration, Visual Development, Background art, 2D/3D Game props </div>
-    <div><b>Softwares</b> — Procreate, Photoshop, 3ds Max, Corona Renderer, Unity 3D, Blender, Davinci Resolve, After Effects</div>
-    <div><b>Available for</b> — Freelance work, Full-time (onsite/hybrid)</div>
+
+  <div class="section-label" style="margin-top:3rem;">Experience</div>
+  <div class="experience-card">
+    <div class="exp-row">
+      <div class="exp-item"><b>Company</b><span>Rajawats Studio LLC</span></div>
+      <div class="exp-item"><b>Designation</b><span>Concept Artist</span></div>
+      <div class="exp-item"><b>Location</b><span>Dubai, UAE</span></div>
+      <div class="exp-item"><b>Duration</b><span>Oct 2019 — Present</span></div>
+    </div>
+    <div class="exp-item" style="margin-bottom:1rem;">
+      <b>Clients &amp; Studios</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Airbnb</span>
+        <span class="tag-pill">Digital Domain</span>
+        <span class="tag-pill">Axis Studios</span>
+        <span class="tag-pill">The Line Animation</span>
+        <span class="tag-pill">Passion Animation Studio</span>
+        <span class="tag-pill">Sun Creature</span>
+        <span class="tag-pill">WIZZ</span>
+        <span class="tag-pill">Savage Software Group</span>
+        <span class="tag-pill">Celsys</span>
+      </div>
+    </div>
+    <div class="exp-item">
+      <b>Notable Projects</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Wagamama</span>
+        <span class="tag-pill">League of Legends</span>
+      </div>
+    </div>
   </div>
+
+  <div class="section-label" style="margin-top:3rem;">Software Proficiency</div>
+  <div class="skills-grid">
+    <div class="skill-badge"><div class="mono">Ps</div><span>Adobe Photoshop</span></div>
+    <div class="skill-badge"><div class="mono">Pr</div><span>Procreate</span></div>
+    <div class="skill-badge"><div class="mono">3d</div><span>3ds Max</span></div>
+    <div class="skill-badge"><div class="mono">U</div><span>Unity 3D</span></div>
+    <div class="skill-badge"><div class="mono">Cr</div><span>Corona Renderer</span></div>
+    <div class="skill-badge"><div class="mono">Bl</div><span>Blender 3D</span></div>
+  </div>
+  <p class="skills-note">Note: these are simple text badges rather than the official software logos — reproducing brand logos runs into trademark/licensing considerations I can't verify per-brand. If you'd like the real logos, most of these companies (Adobe, Blender Foundation, Unity, Autodesk) offer official brand assets you can drop into the <code>images/</code> folder and swap in yourself — see the README.</p>
 </div>
 
-<!-- CONTACT -->
+<!-- ============ CONTACT ============ -->
 <div class="tab-panel" id="panel-contact">
   <a class="contact-mail" href="mailto:s.rajawat@live.com">s.rajawat@live.com</a>
   <div class="socials">
@@ -136,31 +269,50 @@
     <a href="https://twitter.com/SpsRajawat" target="_blank" rel="noopener">Twitter</a>
     <a href="https://www.linkedin.com/in/surendrarajawat" target="_blank" rel="noopener">LinkedIn</a>
   </div>
+
+  <form class="contact-form" id="contactForm">
+    <div class="field">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="field">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="field">
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send message</button>
+  </form>
+  <p class="form-note">Note: this form doesn't send anywhere yet — GitHub Pages can't run server-side code. See the README for a free way to connect it (Formspree) so submissions land in your inbox.</p>
 </div>
 
 <footer>
   <span>© <span id="year"></span> Surendra Rajawat</span>
+  <span>Rajawats Studio LLC</span>
 </footer>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-inner">
-    <div class="modal-close" id="modalClose">Close ✕</div>
-    <div class="modal-nav modal-prev" id="modalPrev">‹</div>
-    <img id="modalImg" src="" alt="">
-    <div class="modal-nav modal-next" id="modalNext">›</div>
-    <div class="modal-caption"><span id="modalTitle"></span> — <span id="modalCount"></span></div>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-close" id="lightboxClose">Close ✕</div>
+    <div class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</div>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-nav lightbox-next" id="lightboxNext">›</div>
+    <div class="lightbox-caption"><span id="lightboxCaption"></span></div>
   </div>
 </div>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ---- Real project data fetched from rajawats.com ---- */
+/* ==================== DATA ==================== */
 const projects = [
   {
     title: "Bloomburrow | Magic: The Gathering",
-    category: "Background Painting — Brazen Animation Studio",
+    category: "studio",
+    meta: "Background Painting — Brazen Animation Studio",
     images: [
       { src: "https://cdnb.artstation.com/p/assets/images/images/083/864/569/large/surendra-rajawat-fieldgrass-sc010-sh100-a-v07.jpg?1736965014", caption: "Main BG — Field grass" },
       { src: "https://cdnb.artstation.com/p/assets/images/images/083/864/579/large/surendra-rajawat-fieldgrass-sc010-sh100-b-v07.jpg?1736964901", caption: "Transition — Field grass" },
@@ -173,107 +325,268 @@ const projects = [
   },
   {
     title: "Ghost of Yotie — Fan Art",
-    category: "Fan Art — GOY Artbook, Sony PlayStation Germany",
+    category: "studio",
+    meta: "Fan Art — GOY Artbook, Sony PlayStation Germany",
     images: [
       { src: "https://cdnb.artstation.com/p/assets/images/images/100/549/065/large/surendra-rajawat-asset.jpg?1783283790", caption: "Ghost of Yotie" }
     ]
   },
   {
     title: "Palia: Cinematic Trailer",
-    category: "Environment — Axis Studios / Singularity 6",
+    category: "studio",
+    meta: "Environment — Axis Studios / Singularity 6",
     images: [
       { src: "https://cdnb.artstation.com/p/assets/images/images/065/882/045/large/surendra-rajawat-roadtotown.jpg?1691483373", caption: "Road to town" }
     ]
   },
   {
     title: "Marvel Midnight Suns: Salem Sisters",
-    category: "Background Paint — Sun Creature / 2K Games",
+    category: "studio",
+    meta: "Background Paint — Sun Creature / 2K Games",
     images: [
       { src: "https://cdna.artstation.com/p/assets/images/images/064/041/560/large/surendra-rajawat-untitled-artwork-2.jpg?1686944855", caption: "Salem Sisters" }
     ]
   },
   {
     title: "League of Legends: Absolution",
-    category: "Background Paintover — Axis Studios / Riot Games",
+    category: "studio",
+    meta: "Background Paintover — Axis Studios / Riot Games",
     images: [
       { src: "https://cdnb.artstation.com/p/assets/images/images/048/714/003/large/surendra-rajawat-2022-04-23-23-29-04-window.jpg?1650737811", caption: "Absolution" }
+    ]
+  },
+  {
+    title: "Personal Study — Example",
+    category: "personal",
+    meta: "Personal Work — placeholder, replace with your own",
+    images: [
+      { src: "", caption: "Add your personal artwork here", placeholder: true }
     ]
   }
 ];
 
-/* ---- Render grid ---- */
-const grid = document.getElementById('projectGrid');
-projects.forEach((project, pIndex) => {
-  const card = document.createElement('div');
-  card.className = 'project-card';
-  card.innerHTML = `
-    <div class="project-thumb">
-      <img src="${project.images[0].src}" alt="${project.title}">
-      ${project.images.length > 1 ? `<div class="count">${project.images.length} pieces</div>` : ''}
-    </div>
-    <div class="project-info">
-      <div class="title">${project.title}</div>
-      <div class="meta">${project.category}</div>
-    </div>
-  `;
-  card.addEventListener('click', () => openModal(pIndex, 0));
-  grid.appendChild(card);
-});
+const cinematics = [
+  {
+    title: '"Free Fire: Booyah Day"',
+    desc: "Cinematic work created with Passion Pictures.",
+    credit: "Director: Jon Saunders · Client: Passion Animation Studios",
+    embed: "https://www.youtube-nocookie.com/embed/WeENy0XYR4E?rel=0"
+  },
+  {
+    title: "Absolution | Sentinels of Light 2021 — League of Legends",
+    desc: "Background paintovers on a 3D base for the LoL Absolution cinematic.",
+    credit: "Produced by: Axis Studio · Client: Riot Games",
+    embed: "https://www.youtube-nocookie.com/embed/a8h1BTe45AU?rel=0"
+  },
+  {
+    title: "League of Legends: Phoenixmancers",
+    desc: "Background paintings for the Phoenixmancers cinematic.",
+    credit: "Art Director: Nicolas Dehghani · Studio: WIZZ @ Quad Group · Client: Tencent, Riot Games",
+    embed: "https://www.youtube-nocookie.com/embed/ES5ah68iyxA?rel=0"
+  },
+  {
+    title: 'Apex Legends | Stories from the Outlands — "Northstar"',
+    desc: "Sky panoramic shots for the Northstar short.",
+    credit: "By Digital Domain",
+    embed: "https://www.youtube-nocookie.com/embed/FTk9VD2nPuw?rel=0"
+  },
+  {
+    title: "Wagamama 'Bowl to Soul' — London",
+    desc: "Visual development and background creation for the campaign.",
+    credit: "Production: Passion Animation Studios · Agency: Mullenlowe · Director: Mads Broni",
+    embed: "https://player.vimeo.com/video/394921700?h=cfb9e93a27&dnt=1"
+  },
+  {
+    title: 'Apex Legends | Stories from the Outlands — "The Endorsement"',
+    desc: "Background paintovers on a 3D base, alongside fellow artists.",
+    credit: "By Passion Pictures, UK · Director: Mads Broni",
+    embed: "https://www.youtube-nocookie.com/embed/M9Pmf9AB4Mo?rel=0"
+  },
+  {
+    title: '"Start Counting" — Chobani Probiotic',
+    desc: "Background work for the campaign spot.",
+    credit: "By The Line Animation · Director: Bjørn-Erik Aschim · Art Direction: Pedro Antoine",
+    embed: "https://www.youtube-nocookie.com/embed/xWMJU-WFTxQ?rel=0"
+  },
+  {
+    title: '"Facebook — Good Ideas Deserve to be Found"',
+    desc: "Backgrounds for the Japanese market edit.",
+    credit: "Directed by David Wilson · Produced by Riff Raff Films",
+    embed: "https://player.vimeo.com/video/519042929?h=33147b0dfd&dnt=1"
+  }
+];
 
-/* ---- Tabs ---- */
-document.querySelectorAll('.nav-links button').forEach(btn => {
-  btn.addEventListener('click', () => {
+const travelVideos = [
+  "GSN91Uu9orQ","avfpV1E0WIM","xMIp1xX6DiI","kZpeSjCiBpU","iUrp4VC-w-Q","K2vIVg9Qhf4",
+  "DJD5mZk4ktM","mH-6ry7mhoY","NRivCqDn97A","CumQUbHhPY8","C9dXGXevDYM","5bMPyacMRMk",
+  "PZmf7Q76wMU","jLSGt_Pa3q4"
+];
+
+/* ==================== TABS ==================== */
+document.querySelectorAll('[data-tab]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const tab = btn.dataset.tab;
     document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+    const navBtn = document.querySelector('.nav-links button[data-tab="' + tab + '"]');
+    if(navBtn) navBtn.classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
 
-/* ---- Modal gallery ---- */
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modalImg');
-const modalTitle = document.getElementById('modalTitle');
-const modalCount = document.getElementById('modalCount');
-const modalPrev = document.getElementById('modalPrev');
-const modalNext = document.getElementById('modalNext');
-let currentProject = 0, currentImage = 0;
+/* ==================== WORK: grid + filter ==================== */
+const projectGrid = document.getElementById('projectGrid');
+const filterBar = document.getElementById('filterBar');
+let activeFilter = 'all';
 
-function openModal(pIndex, iIndex){
-  currentProject = pIndex; currentImage = iIndex;
-  renderModal();
-  modal.classList.add('open');
+function renderProjectGrid(){
+  projectGrid.innerHTML = '';
+  projects
+    .filter(p => activeFilter === 'all' || p.category === activeFilter)
+    .forEach((project) => {
+      const pIndex = projects.indexOf(project);
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      const thumbSrc = project.images[0].src || 'https://placehold.co/600x600/191816/8C877D?text=Add+Image';
+      card.innerHTML = `
+        <div class="project-thumb">
+          <div class="tag">${project.category === 'personal' ? 'Personal' : 'Studio'}</div>
+          <img src="${thumbSrc}" alt="${project.title}">
+          ${project.images.length > 1 ? `<div class="count">${project.images.length} pieces</div>` : ''}
+        </div>
+        <div class="project-info">
+          <div class="title">${project.title}</div>
+          <div class="meta">${project.meta}</div>
+        </div>
+      `;
+      card.addEventListener('click', () => openProjectDetail(pIndex));
+      projectGrid.appendChild(card);
+    });
 }
-function renderModal(){
+renderProjectGrid();
+
+filterBar.addEventListener('click', (e) => {
+  if(e.target.classList.contains('filter-btn')){
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    activeFilter = e.target.dataset.filter;
+    renderProjectGrid();
+  }
+});
+
+/* ==================== WORK: inline project detail (no popup) ==================== */
+const workGridView = document.getElementById('workGridView');
+const projectDetail = document.getElementById('projectDetail');
+const detailTitle = document.getElementById('detailTitle');
+const detailMeta = document.getElementById('detailMeta');
+const artworkGrid = document.getElementById('artworkGrid');
+let currentProject = 0;
+
+function openProjectDetail(pIndex){
+  currentProject = pIndex;
+  const project = projects[pIndex];
+  detailTitle.textContent = project.title;
+  detailMeta.textContent = project.meta;
+
+  artworkGrid.innerHTML = '';
+  project.images.forEach((img, iIndex) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'artwork-thumb';
+    const src = img.src || 'https://placehold.co/600x600/191816/8C877D?text=Add+Image';
+    thumb.innerHTML = `
+      <div class="frame"><img src="${src}" alt="${img.caption}"></div>
+      <div class="cap">${img.caption}</div>
+    `;
+    thumb.addEventListener('click', () => { if(!img.placeholder) openLightbox(pIndex, iIndex); });
+    artworkGrid.appendChild(thumb);
+  });
+
+  workGridView.style.display = 'none';
+  projectDetail.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.getElementById('backToWork').addEventListener('click', () => {
+  projectDetail.classList.remove('active');
+  workGridView.style.display = 'block';
+});
+
+/* ==================== LIGHTBOX ==================== */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+let currentImage = 0;
+
+function openLightbox(pIndex, iIndex){
+  currentProject = pIndex; currentImage = iIndex;
+  renderLightbox();
+  lightbox.classList.add('open');
+}
+function renderLightbox(){
   const project = projects[currentProject];
   const img = project.images[currentImage];
-  modalImg.src = img.src;
-  modalImg.alt = img.caption;
-  modalTitle.textContent = img.caption;
-  modalCount.textContent = (currentImage + 1) + ' / ' + project.images.length;
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.caption;
+  lightboxCaption.textContent = img.caption + ' — ' + (currentImage + 1) + ' / ' + project.images.length;
   const multi = project.images.length > 1;
-  modalPrev.hidden = !multi;
-  modalNext.hidden = !multi;
+  lightboxPrev.hidden = !multi;
+  lightboxNext.hidden = !multi;
 }
-function closeModal(){ modal.classList.remove('open'); modalImg.src=''; }
-modalPrev.addEventListener('click', () => {
+function closeLightbox(){ lightbox.classList.remove('open'); lightboxImg.src=''; }
+lightboxPrev.addEventListener('click', () => {
   const len = projects[currentProject].images.length;
   currentImage = (currentImage - 1 + len) % len;
-  renderModal();
+  renderLightbox();
 });
-modalNext.addEventListener('click', () => {
+lightboxNext.addEventListener('click', () => {
   const len = projects[currentProject].images.length;
   currentImage = (currentImage + 1) % len;
-  renderModal();
+  renderLightbox();
 });
-document.getElementById('modalClose').addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => {
-  if(!modal.classList.contains('open')) return;
-  if(e.key === 'Escape') closeModal();
-  if(e.key === 'ArrowLeft') modalPrev.click();
-  if(e.key === 'ArrowRight') modalNext.click();
+  if(lightbox.classList.contains('open')){
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') lightboxPrev.click();
+    if(e.key === 'ArrowRight') lightboxNext.click();
+  }
+});
+
+/* ==================== CINEMATICS ==================== */
+const cinematicsList = document.getElementById('cinematicsList');
+cinematics.forEach(v => {
+  const card = document.createElement('div');
+  card.className = 'video-card';
+  card.innerHTML = `
+    <div class="video-frame"><iframe src="${v.embed}" title="${v.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    <div class="video-text">
+      <div class="v-title">${v.title}</div>
+      <div class="v-desc">${v.desc}</div>
+      <div class="v-credit">${v.credit}</div>
+    </div>
+  `;
+  cinematicsList.appendChild(card);
+});
+
+/* ==================== VIDEOGRAPHY ==================== */
+const videographyGrid = document.getElementById('videographyGrid');
+travelVideos.forEach((id, i) => {
+  const item = document.createElement('div');
+  item.innerHTML = `
+    <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="Travel clip ${i+1}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    <div class="v-title">Travel Clip ${String(i+1).padStart(2,'0')}</div>
+  `;
+  videographyGrid.appendChild(item);
+});
+
+/* ==================== CONTACT FORM ==================== */
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Form submitted — connect this to Formspree so it actually emails you. See README.md.');
 });
 </script>
 
