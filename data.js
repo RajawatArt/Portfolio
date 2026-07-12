@@ -13,7 +13,8 @@
  *   title: "Project Name",
  *   category: "studio",
  *   meta: "Role — Studio / Client",
- *   video: "https://youtube.com/watch?v=...", // optional
+ *   video: "https://youtube.com/watch?v=...", // optional — single video
+ *   videos: ["https://youtube.com/watch?v=...", "https://vimeo.com/..."], // optional — multiple videos (use instead of "video")
  *   images: [
  *     { src: "image-url", caption: "Image description" },
  *   ]
@@ -77,11 +78,12 @@ const projects = [
     category: "studio",
     meta: "Environment — Mana Animation",
     thumbnail: "",
-    video: "https://youtu.be/Zu_1_Sd8aCk",
-    video: "https://youtu.be/jk4wEnN98ko",
-    video: "https://youtu.be/iXe6N4cvsCY",
-    video: "https://youtu.be/iXe6N4cvsCY",
-    video: "https://youtu.be/vjT4sz6THdU",
+    videos: [
+      "https://youtu.be/Zu_1_Sd8aCk",
+      "https://youtu.be/jk4wEnN98ko",
+      "https://youtu.be/iXe6N4cvsCY",
+      "https://youtu.be/vjT4sz6THdU"
+    ],
     images: [
       { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_CleansingIsle.jpg`, caption: "Stadium seats" },
       { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumExt_Hitter.jpg`, caption: "Hitter" },
@@ -119,7 +121,7 @@ const projects = [
       { src: `${ASSET_BASE}/images/studio/hayday/hdy03.jpg`, caption: "Soil" },
       { src: `${ASSET_BASE}/images/studio/hayday/hdy04.jpg`, caption: "House door Opened" },
       { src: `${ASSET_BASE}/images/studio/hayday/hdy06.jpg`, caption: "Ground" },
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy_101_0010_060_bgPaint_v04.mp4`, caption: "Process reel" }
+      { src: `${ASSET_BASE}/images/studio/hayday/hdy_101_0010_060_bgPaint_v04.mp4`, caption: "Background paint process" }
     ]
   },
   {
