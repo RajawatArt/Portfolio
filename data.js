@@ -221,6 +221,22 @@ const projects = [
       { src: `${ASSET_BASE}/images/studio/Chobani/chobani_kitchen_01.jpg`, caption: "Kitchen old" }
     ]
   },
+  {
+    title: "Kenji's Sushi Shop Showdown - Brawl Stars",
+    category: "studio",
+    meta: "Environment — DoublePlus Studio/ ",
+    thumbnail:`${ASSET_BASE}/images/studio/wizz/Phoenixmancers_thumb.jpg`,
+    videos: [
+      "https://youtu.be/Q8D95ErQbjk",
+    ],
+    images: [
+      { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_Dayl.jpg`, caption: "Restaurant Day" },
+      { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_night.jpg`, caption: "Restaurant night" },
+      { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_backdoor.jpg`, caption: "Backdoor" },
+      { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_closet.jpg`, caption: "closet" },
+      { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_B.jpg`, caption: "Stadium" }
+    ]
+  },
 {
   title: 'Free Fire "Lucha Libre AAA"',
   category: "studio",
