@@ -203,7 +203,7 @@ const projects = [
     ]
   },
     {
-    title: "Apex Legends- Stories from the Outlands – The Endorsement,
+    title: "Apex Legends- Stories from the Outlands – The Endorsement",
     category: "studio",
     meta: "Environment — Passion Animation/ Had a pleasure working on the new cinematic trailer made by Passion Pictures- UK under the direction of Mads Broni",
     thumbnail:`${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement_thumb.jpg`,
