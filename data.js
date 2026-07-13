@@ -178,10 +178,12 @@ const projects = [
     { src: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_Process_gif.gif`, caption: "Process" }
   ]
 },
+
   {
    title: "Background art- FACEBOOK - Good Ideas Deserve to be Found",
   category: "studio",
   meta: "Environment — Riff Raff Films / Some background that I did for Facebook commercial video directed by David Wilson",
+  thumbnail: `${ASSET_BASE}/images/studio/RiffRaff/Japanese_Market_thumb.jpg`,
   video: "https://player.vimeo.com/video/519042929?h=33147b0dfd&dnt=1",
   images: [
     { src: `${ASSET_BASE}/images/studio/RiffRaff/Japanese_Market_street.jpg`, caption: "Japanese Market" },
