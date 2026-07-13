@@ -200,6 +200,30 @@ const projects = [
       { src: `${ASSET_BASE}/images/studio/Chobani/chobani_kitchen_01.jpg`, caption: "Kitchen old" }
     ]
   },
+    {
+    title: "Apex Legends | Stories from the Outlands – “The Endorsement”,
+    category: "studio",
+    meta: "Environment — Passion Animation/ Had a pleasure working on the new cinematic trailer Apex Legends | Stories from the Outlands – The Endorsement made by Passion Pictures- UK with the direction of Mads Broni",
+    thumbnail:`${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement_thumb.jpg`,
+   videos: "https://www.youtube.com/embed/M9Pmf9AB4Mo?si=9EwgFhvZJoPl-S1u",
+    images: [
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement01.jpg`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement02.jpg`},
+  { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_Preview02.mp4`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement03.jpg`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement04.jpg`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement05.jpg`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement12.jpg`},
+  { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_Preview01.mp4`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement06.jpg`},
+  { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_Preview06.mp4`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement07.jpg`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement08.jpg`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement09.jpg`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement10.jpg`},
+      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement11.jpg`}    
+    ]
+  },
   {
     title: "Kenji's Sushi Shop Showdown - Brawl Stars",
     category: "studio",
