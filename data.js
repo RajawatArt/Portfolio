@@ -23,228 +23,354 @@
 
 const ASSET_BASE = "https://pub-55a74feacf2244e2a0a923ce15f2237d.r2.dev";
 
+// ==================== HELPER FACTORY ====================
+const createHelper = (basePath) => (f, c) => ({ 
+  src: `${ASSET_BASE}/${basePath}/${f}`, 
+  caption: c 
+});
+
+const thumb = (folder, f) => `${ASSET_BASE}/images/${folder}/${f}`;
+
+// ==================== STUDIO WORK ====================
+const absolution = createHelper("images/studio/absolution");
+const adultswim = createHelper("images/studio/adultswim");
+const airbnb = createHelper("images/studio/airbnb");
+const apex_endorsement = createHelper("images/studio/apex_endorsement");
+const bazaar = createHelper("images/studio/bazaar");
+const booyah = createHelper("images/studio/booyah");
+const brawl = createHelper("images/studio/brawl");
+const chobani = createHelper("images/studio/Chobani");
+const freefire = createHelper("images/studio/freefire");
+const trainline = createHelper("images/studio/goldenwolf");
+const hayday = createHelper("images/studio/hayday");
+const kizaziMoto = createHelper("images/studio/kizazi");
+const midnight = createHelper("images/studio/midnight");
+const mtg = createHelper("images/studio/mtg");
+const palia = createHelper("images/studio/Palia");
+const facebook = createHelper("images/studio/RiffRaff");
+const riot_domination = createHelper("images/studio/riot_domination");
+const riot_northstar = createHelper("images/studio/riot_northstar");
+const syncron = createHelper("images/studio/syncron");
+const valorant_vibes = createHelper("images/studio/valorant_vibes");
+const wagamama = createHelper("images/studio/wagamama");
+const phoenix = createHelper("images/studio/wizz");
+const procreate = createHelper("images/studio/procreate");
+
+// ==================== PERSONAL WORK ====================
+const ghibli = createHelper("images/personal/ghibli");
+const goy = createHelper("images/personal/ghost_of_yotie");
+const beautifulday = createHelper("images/personal/Beautiful_day");
+
+// ==================== ALBUM ART ====================
+const lofigirl = createHelper("images/album/lofiGirl");
+
 const projects = [
   {
     title: "Bloomburrow | Magic: The Gathering",
     category: "studio",
     meta: "Background Painting — Brazen Animation Studio",
-    thumbnail: `${ASSET_BASE}/images/studio/mtg/mtg_thumb.jpg`,
+    thumbnail: thumb("studio/mtg", "mtg_thumb.jpg"),
     images: [
-      { src: `${ASSET_BASE}/images/studio/mtg/fieldGrass_A.jpg`, caption: "Main BG — Field grass" },
-      { src: `${ASSET_BASE}/images/studio/mtg/fieldGrass_B.jpg`, caption: "Transition — Field grass" },
-      { src: `${ASSET_BASE}/images/studio/mtg/cityPath.jpg`, caption: "City path" },
-      { src: `${ASSET_BASE}/images/studio/mtg/fieldGrassFlies.jpg`, caption: "Field grass, flies" },
-      { src: `${ASSET_BASE}/images/studio/mtg/cityStatue.jpg`, caption: "City statue" },
-      { src: `${ASSET_BASE}/images/studio/mtg/forestWide.jpg`, caption: "Forest, wide" },
-      { src: `${ASSET_BASE}/images/studio/mtg/fieldBattleReverse.jpg`, caption: "Field battle, reverse angle" }
+      mtg("fieldGrass_A.jpg", "Main BG — Field grass"),
+      mtg("fieldGrass_B.jpg", "Transition — Field grass"),
+      mtg("cityPath.jpg", "City path"),
+      mtg("fieldGrassFlies.jpg", "Field grass, flies"),
+      mtg("cityStatue.jpg", "City statue"),
+      mtg("forestWide.jpg", "Forest, wide"),
+      mtg("fieldBattleReverse.jpg", "Field battle, reverse angle")
     ]
   },
+
   {
     title: "Ghost of Yotie — Fan Art",
     category: "personal",
     meta: "Fan Art — GOY Artbook, Sony PlayStation Germany",
-    thumbnail: "",
+    thumbnail: thumb("personal/ghost_of_yotie", "goy_ride.jpg"),
     images: [
-      { src: `${ASSET_BASE}/images/personal/ghost_of_yotie/goy_ride.jpg`, caption: "Ride" },
-      { src: `${ASSET_BASE}/images/personal/ghost_of_yotie/goy_duel.jpg`, caption: "Duel" },
-      { src: `${ASSET_BASE}/images/personal/ghost_of_yotie/goy_mountain.jpg`, caption: "Rest" },
-      { src: `${ASSET_BASE}/images/personal/ghost_of_yotie/goy_onsen.jpg`, caption: "Onsen" },
-      { src: `${ASSET_BASE}/images/personal/ghost_of_yotie/goy_bookpage.jpg`, caption: "book" },
-      { src: `${ASSET_BASE}/images/personal/ghost_of_yotie/goy_book.jpg`, caption: "book" }
+      goy("goy_ride.jpg", "Ride"),
+      goy("goy_duel.jpg", "Duel"),
+      goy("goy_mountain.jpg", "Rest"),
+      goy("goy_onsen.jpg", "Onsen"),
+      goy("goy_bookpage.jpg", "book"),
+      goy("goy_book.jpg", "book")
     ]
   },
+
   {
     title: "Palia: Cinematic Trailer",
     category: "studio",
     meta: "Environment — Axis Studios / Singularity 6",
-    thumbnail: `${ASSET_BASE}/images/studio/Palia/Palia_thumb.jpg`,
+    thumbnail: thumb("studio/Palia", "Palia_thumb.jpg"),
     video: "https://youtu.be/lYI7HGeCF_s",
     images: [
-      { src: `${ASSET_BASE}/images/studio/Palia/Palia_ForestRuins_02.jpg`, caption: "Forest Ruin" },
-      { src: `${ASSET_BASE}/images/studio/Palia/Palia_ForestRuin.jpg`, caption: "Town" },
-      { src: `${ASSET_BASE}/images/studio/Palia/Palia_Bridge.jpg`, caption: "Bridge" },
-      { src: `${ASSET_BASE}/images/studio/Palia/RoadToTown.jpg`, caption: "Road to town" },
-      { src: `${ASSET_BASE}/images/studio/Palia/PALIA_Road_To_Town_Paintover_practice.jpg`, caption: "Gate" },
-      { src: `${ASSET_BASE}/images/studio/Palia/Palia_ForestRuins03.jpg`, caption: "Forest Ruin sunset" },
-      { src: `${ASSET_BASE}/images/studio/Palia/ForestCreek.jpg`, caption: "Day version painted by Yannic Kawan" },
-      { src: `${ASSET_BASE}/images/studio/Palia/Town_Monument.jpg`, caption: "Town Monument" },
-      { src: `${ASSET_BASE}/images/studio/Palia/Palia_ForestRuin_sketch.jpg`, caption: "Sketch" },
-      { src: `${ASSET_BASE}/images/studio/Palia/Palia_Road_To_Town_Paintover_practice.gif`, caption: "Process Preview" },
-      { src: `${ASSET_BASE}/images/studio/Palia/Town_Monument_Process_preview.gif`, caption: "Process Preview" }
+      palia("Palia_ForestRuins_02.jpg", "Forest Ruin"),
+      palia("Palia_ForestRuin.jpg", "Town"),
+      palia("Palia_Bridge.jpg", "Bridge"),
+      palia("RoadToTown.jpg", "Road to Town"),
+      palia("Palia_Road_To_Town_Paintover_practice.jpg", "Gate"),
+      palia("Palia_ForestRuins03.jpg", "Day version painted by Yannic Kawan"),
+      palia("Town_Monument.jpg", "Town Monument"),
+      palia("Palia_ForestRuin_sketch.jpg", "Sketch"),
+      palia("Palia_Road_To_Town_Paintover_practice.gif", "Process Preview"),
+      palia("Town_Monument_Process_preview.gif", "Process Preview")
     ]
   },
+
   {
     title: "Background art- The bazaar official launch tailer",
     category: "studio",
     meta: "Environment — Mana Studio / Background work completed for The Bazaar Launch Trailer under the art direction of Jorik Feskens Background layout supplied by the client",
-    thumbnail: `${ASSET_BASE}/images/studio/bazaar/BZ_thumb.jpg`,
+    thumbnail: thumb("studio/bazaar", "BZ_thumb.jpg"),
     video: "https://vimeo.com/954096994",
     images: [
-      { src: `${ASSET_BASE}/images/studio/bazaar/01.jpg`, caption: "Harbour" },
-      { src: `${ASSET_BASE}/images/studio/bazaar/BG_Alley.jpg`, caption: "Alley" },
-      { src: `${ASSET_BASE}/images/studio/bazaar/02.jpg`, caption: "City Entrance" },
-      { src: `${ASSET_BASE}/images/studio/bazaar/Mak_lab.jpg`, caption: "Mak Lab" },
-      { src: `${ASSET_BASE}/images/studio/bazaar/Bazaar_colorScript.jpg`, caption: "Colour Script" }
+      bazaar("01.jpg", "Harbour"),
+      bazaar("BG_Alley.jpg", "Alley"),
+      bazaar("02.jpg", "City Entrance"),
+      bazaar("Mak_lab.jpg", "Mak Lab"),
+      bazaar("Bazaar_colorScript.jpg", "Colour Script")
     ]
   },
+
   {
     title: "A Day in a Hay Day- Trailer",
     category: "studio",
     meta: "Environment — Sun Creature Studio / Background work for the game trailer. Background layout supplied by the client",
-    thumbnail: `${ASSET_BASE}/images/studio/hayday/hyd_thumb.jpg`,
+    thumbnail: thumb("studio/hayday", "hyd_thumb.jpg"),
     video: "https://youtu.be/otQ6kAZJXcY",
     images: [
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy01.jpg`, caption: "Windmill" },
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy04.jpg`, caption: "House front" },
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy02.jpg`, caption: "Fence" },
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy03.jpg`, caption: "Soil" },
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy04.jpg`, caption: "House door Opened" },
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy06.jpg`, caption: "Ground" },
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy_101_0010_060_bgPaint_v04.mp4`, caption: "Background paint process" }
+      hayday("hdy01.jpg", "Windmill"),
+      hayday("hdy04.jpg", "House front"),
+      hayday("hdy02.jpg", "Fence"),
+      hayday("hdy03.jpg", "Soil"),
+      hayday("hdy04.jpg", "House door Opened"),
+      hayday("hdy06.jpg", "Ground"),
+      hayday("hdy_101_0010_060_bgPaint_v04.mp4", "Background paint process")
     ]
   },
+
   {
     title: "Marvel Midnight Suns: Salem Sisters",
     category: "studio",
     meta: "Background Paint — Sun Creature / 2K Games",
-    thumbnail: `${ASSET_BASE}/images/studio/midnight/midnight_thumb.jpg`,
+    thumbnail: thumb("studio/midnight", "midnight_thumb.jpg"),
     images: [
-      { src: `${ASSET_BASE}/images/studio/midnight/salem_sisters.jpg`, caption: "Salem Sisters" },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_01.jpg`, caption: "City Street" },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_02.jpg`, caption: "door" },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_03.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_04.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_05.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_06.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_07.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_08.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_09.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_10.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_11.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_12.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_13.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_14.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_15.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_16.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_17.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/mms_18.jpg` },
-      { src: `${ASSET_BASE}/images/studio/midnight/Process_preview.gif`, caption: "Process Preview" }
-    ]
-},
-{
-  title: "Return to Valoran City — Star Guardian",
-  category: "studio",
-  meta: "Background Art — Sun Creature Studio / League of Legends",
-  thumbnail: `${ASSET_BASE}/images/studio/valorant_vibes/vibes_thumb.jpg`,
-  video: "https://youtu.be/nEFcbKF4WfY",
-  images: [
-    { src: `${ASSET_BASE}/images/studio/valorant_vibes/vibes_classroom.jpg`, caption: "Return to Valoran City" },
-    { src: `${ASSET_BASE}/images/studio/valorant_vibes/vibes_piano.jpg`, caption: "Piano" }
-  ]
-},
-{
-  title: "Trainline: I Came By Train (Craig David)",
-  category: "studio",
-  meta: "Design — Golden Wolf / Trainline",
-  thumbnail: `${ASSET_BASE}/images/studio/goldenwolf/trainline_thumb.jpg`,
-  video: "https://vimeo.com/763817515",
-  images: [
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline01.jpg`, caption: "I Came By Train" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline02.jpg`, caption: "Better Days" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline03.jpg`, caption: "Better Days" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline04.jpg`, caption: "Better Days" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline05.jpg`, caption: "Better Days" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline06.jpg`, caption: "Better Days" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline07.jpg`, caption: "Better Days" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline08.jpg`, caption: "Better Days" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline09.jpg`, caption: "Better Days" },
-    { src: `${ASSET_BASE}/images/studio/goldenwolf/trainline10.jpg`, caption: "Better Days" }
-    
-  ]
-},
-{
-  title: "League of Legends: Phoenixmancers Backgrounds",
-  category: "studio",
-  meta: "Background Painting — WIZZ @ Quad Group / Riot Games",
-  thumbnail: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_thumb.jpg`,
-  video: "https://www.youtube-nocookie.com/embed/ES5ah68iyxA?rel=0",
-  images: [
-    { src: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_BG01.jpg`, caption: "Phoenixmancers" },
-    { src: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_BG02.jpg`, caption: "Phoenixmancers" },
-    { src: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_BG03.jpg`, caption: "Phoenixmancers" },
-    { src: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_BG04.jpg`, caption: "Phoenixmancers" },
-    { src: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_BG05.jpg`, caption: "Phoenixmancers" },
-    { src: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_BG06.jpg`, caption: "Phoenixmancers" },
-    { src: `${ASSET_BASE}/images/studio/wizz/Phoenixmancers_Process_gif.gif`, caption: "Process" }
-  ]
-},
-
-  {
-   title: "Background art- FACEBOOK - Good Ideas Deserve to be Found",
-  category: "studio",
-  meta: "Environment — Riff Raff Films / Some background that I did for Facebook commercial video directed by David Wilson",
-  thumbnail: `${ASSET_BASE}/images/studio/RiffRaff/Japanese_Market_thumb.jpg`,
-  video: "https://player.vimeo.com/video/519042929?h=33147b0dfd&dnt=1",
-  images: [
-    { src: `${ASSET_BASE}/images/studio/RiffRaff/Japanese_Market_street.jpg`, caption: "Japanese Market" },
-    { src: `${ASSET_BASE}/images/studio/RiffRaff/Japanese_Market_side.png`, caption: "Market Side shot panoramic" },
-    { src: `${ASSET_BASE}/images/studio/RiffRaff/facebook_cut.mp4`, caption: "preview" },
-    { src: `${ASSET_BASE}/images/studio/RiffRaff/Japanese_Market_manhole.png`, caption: "manhole" }
-  ]
- },
-    {
-    title: "Background art- “Start Counting” Chobani Probiotic",
-    category: "studio",
-    meta: "Environment — The Line Animation Studio / Director by Bjørn-Erik Aschim / Art Direction by Pedro Antoine / concept art by: Chiara Benedetti",
-    video: "https://www.youtube-nocookie.com/embed/xWMJU-WFTxQ?rel=0",
-    images: [
-      { src: `${ASSET_BASE}/images/studio/Chobani/chobani_kitchen_02.jpg`, caption: "Kitchen Modern " },
-      { src: `${ASSET_BASE}/images/studio/Chobani/chobani_kitchen_01.jpg`, caption: "Kitchen old" }
+      midnight("salem_sisters.jpg", "Salem Sisters"),
+      midnight("mms_01.jpg", "City Street"),
+      midnight("mms_02.jpg", "door"),
+      midnight("mms_03.jpg"),
+      midnight("mms_04.jpg"),
+      midnight("mms_05.jpg"),
+      midnight("mms_06.jpg"),
+      midnight("mms_07.jpg"),
+      midnight("mms_08.jpg"),
+      midnight("mms_09.jpg"),
+      midnight("mms_10.jpg"),
+      midnight("mms_11.jpg"),
+      midnight("mms_12.jpg"),
+      midnight("mms_13.jpg"),
+      midnight("mms_14.jpg"),
+      midnight("mms_15.jpg"),
+      midnight("mms_16.jpg"),
+      midnight("mms_17.jpg"),
+      midnight("mms_18.jpg"),
+      midnight("Process_preview.gif", "Process Preview")
     ]
   },
-    {
+
+  {
+    title: "Return to Valoran City — Star Guardian",
+    category: "studio",
+    meta: "Background Art — Sun Creature Studio / League of Legends",
+    thumbnail: thumb("studio/valorant_vibes", "vibes_thumb.jpg"),
+    video: "https://youtu.be/nEFcbKF4WfY",
+    images: [
+      valorant_vibes("vibes_classroom.jpg", "Return to Valoran City"),
+      valorant_vibes("vibes_piano.jpg", "Piano")
+    ]
+  },
+
+  {
+    title: "Trainline: I Came By Train (Craig David)",
+    category: "studio",
+    meta: "Design — Golden Wolf / Trainline",
+    thumbnail: thumb("studio/goldenwolf", "trainline_thumb.jpg"),
+    video: "https://vimeo.com/763817515",
+    images: [
+      trainline("trainline01.jpg", "I Came By Train"),
+      trainline("trainline02.jpg", "Better Days"),
+      trainline("trainline03.jpg", "Better Days"),
+      trainline("trainline04.jpg", "Better Days"),
+      trainline("trainline05.jpg", "Better Days"),
+      trainline("trainline06.jpg", "Better Days"),
+      trainline("trainline07.jpg", "Better Days"),
+      trainline("trainline08.jpg", "Better Days"),
+      trainline("trainline09.jpg", "Better Days"),
+      trainline("trainline10.jpg", "Better Days")
+    ]
+  },
+
+  {
+    title: "League of Legends: Phoenixmancers Backgrounds",
+    category: "studio",
+    meta: "Background Painting — WIZZ @ Quad Group / Riot Games",
+    thumbnail: thumb("studio/wizz", "Phoenixmancers_thumb.jpg"),
+    video: "https://www.youtube-nocookie.com/embed/ES5ah68iyxA?rel=0",
+    images: [
+      phoenix("Phoenixmancers_BG01.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG02.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG03.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG04.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG05.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG06.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_Process_gif.gif", "Process")
+    ]
+  },
+
+   {
+    title: "League of Legends: Sentinels of Light|Absolution",
+    category: "studio",
+    meta: "Background Painting — Axis Studio / Riot Games",
+    thumbnail: thumb("studio/absolution", "lol_abs_thumb.jpg"),
+    video: "https://www.youtube.com/embed/a8h1BTe45AU?si=W6CcTTbVECZN2wyU",
+    images: [
+      absolution("lol_BGPaint02_pillar.jpg", ""),
+      absolution("lol_BGPaint01_pillar.jpg", ""),
+      absolution("lol_BGPaint04_steps.jpg", ""),
+      absolution("lol_BGPaint05_throne.jpg", ""),
+      absolution("LOL_Absolution_compilation.mp4", "Backgrounds in Final trailer compilation"),
+      absolution("LOL_Absolution_cut01.mp4", "background"),
+      absolution("LOL_Absolution_cut02.mov", "background02"),
+      absolution("LOL_Absolution_cut03.mov", "background03"),
+      absolution("LOL_Absolution_cut04.mov", "background04"),
+      absolution("SoL2_02_030_anim.gif", "Process")
+    ]
+  },
+  {
+    title: "Background art- FACEBOOK - Good Ideas Deserve to be Found",
+    category: "studio",
+    meta: "Environment — Riff Raff Films / Some background that I did for Facebook commercial video directed by David Wilson",
+    thumbnail: thumb("studio/RiffRaff", "Japanese_Market_thumb.jpg"),
+    video: "https://player.vimeo.com/video/519042929?h=33147b0dfd&dnt=1",
+    images: [
+      facebook("Japanese_Market_street.jpg", "Japanese Market"),
+      facebook("Japanese_Market_side.png", "Market Side shot panoramic"),
+      facebook("facebook_cut.mp4", "preview"),
+      facebook("Japanese_Market_manhole.png", "manhole")
+    ]
+  },
+
+  {
+    title: "Background art- \"Start Counting\" Chobani Probiotic",
+    category: "studio",
+    meta: "Environment — The Line Animation Studio / Director by Bjørn-Erik Aschim / Art Direction by Pedro Antoine / concept art by: Chiara Benedetti",
+    thumbnail: thumb("studio/Chobani", "chobani_kitchen_02.jpg"),
+    video: "https://www.youtube-nocookie.com/embed/xWMJU-WFTxQ?rel=0",
+    images: [
+      chobani("chobani_kitchen_02.jpg", "Kitchen Modern"),
+      chobani("chobani_kitchen_01.jpg", "Kitchen old")
+    ]
+  },
+  
+  {
+    title: "Kizazi Moto: Mukudzei",
+    category: "studio",
+    meta: "Background Painting — Digital Dimension / Saturday Animation Studio - A few years ago, I had an amazing experience collaborating with the talented team at Digital Dimension, under Sunny Shah’s art direction, on *Kizazi Moto: Mukudzei EP06*. I contributed to concept designs for the pavilion, Sky Road, rooftop interiors and exteriors, and created digital matte paintings for the sky backgrounds throughout the film www.saturdayanimation.com/kizazimoto",
+    thumbnail: thumb("studio/kizazi", "KM_Thumb01.jpg"),
+    video: "https://www.youtube.com/embed/WpypOiIB2jc?si=_8sjHHoYODDy9V6V",
+    images: [
+      kizaziMoto("Muku_Pavilion_concept.jpg", "Eagle pavilion concept"),
+      kizaziMoto("Muku_Eagle_Pavilion_aerial.jpg", "pavilion aerial view"),
+      kizaziMoto("Muku_Eagle_Tower.jpg", "Eagle Tower"),
+      kizaziMoto("Muku_city_pattern.jpg", "City"),
+      kizaziMoto("Muku_Rooftop_int.jpg", "Rooftop Indoor"),
+      kizaziMoto("Muku_Rooftop_aerial.jpg", "Rooftop aerial"),
+      kizaziMoto("Muku_eagle_Pavilion_ideas.jpg", "Eagle Pavilion city early sketches"),
+      kizaziMoto("Muku_eagle_Pavilion_info.jpg", "Eagle Pavilion sketches"),
+      kizaziMoto("Muku_Rooftop_int_concepts.jpg", "Rooftop indoor early sketches"),
+      kizaziMoto("Muku_Eagle_Tower_ideas.jpg", "Eagle Tower early sketches"),
+      kizaziMoto("Muku_skyroad.jpg", "Sky Road"),
+      kizaziMoto("Muku_skyroad_ideas.jpg", "sky Road early sketches"),
+      kizaziMoto("Muku_ShonaBuildings.jpg", "Shona Building concepts"),
+      kizaziMoto("Muku_DMP_village.jpg", "Eagle Tower early sketches"),
+      kizaziMoto("Muku_DMP_village_west.jpg", "village West"),
+      kizaziMoto("Muku_DMP_village_east.jpg", "Village east"),
+      kizaziMoto("Muku_DMP_village_center01.jpg", "Village Center"),
+      kizaziMoto("Muku_DMP_village_center02.jpg", "Village center"),
+      kizaziMoto("Muku_sky_01_web.jpg", "Sky DMP"),
+      kizaziMoto("Muku_SkyDMP03.jpg", "Sky DMP"),
+      kizaziMoto("Muku_SkyDMP02.jpg", "Sky DMP"),
+      kizaziMoto("Muku_SkyDMP04.jpg", "Sky DMP"),
+      kizaziMoto("Muku_SkyDMP05.jpg", "Sky DMP"),
+      kizaziMoto("Muku_SkyDMP01.jpg", "Sky DMP")
+    ]
+  },
+
+  {
     title: "Apex Legends- Stories from the Outlands – The Endorsement",
     category: "studio",
     meta: "Environment — Passion Animation/ Had a pleasure working on the new cinematic trailer made by Passion Pictures- UK under the direction of Mads Broni",
-    thumbnail:`${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement_thumb.jpg`,
-   videos: "https://www.youtube.com/embed/M9Pmf9AB4Mo?si=9EwgFhvZJoPl-S1u",
+    thumbnail: thumb("studio/apex_endorsement", "apex_endorsement_thumb.jpg"),
+    videos: "https://www.youtube.com/embed/M9Pmf9AB4Mo?si=9EwgFhvZJoPl-S1u",
     images: [
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement01.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement02.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_Preview02.mp4`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement03.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement04.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement05.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement12.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_Preview01.mp4`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement06.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_Preview06.mp4`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement07.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement08.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement09.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement10.jpg`},
-      { src: `${ASSET_BASE}/images/studio/apex_endorsement/apex_endorsement11.jpg`}    
+      apex_endorsement("apex_endorsement01.jpg"),
+      apex_endorsement("apex_endorsement02.jpg"),
+      apex_endorsement("apex_Preview02.mp4"),
+      apex_endorsement("apex_endorsement03.jpg"),
+      apex_endorsement("apex_endorsement04.jpg"),
+      apex_endorsement("apex_endorsement05.jpg"),
+      apex_endorsement("apex_endorsement12.jpg"),
+      apex_endorsement("apex_Preview01.mp4"),
+      apex_endorsement("apex_endorsement06.jpg"),
+      apex_endorsement("apex_Preview06.mp4"),
+      apex_endorsement("apex_endorsement07.jpg"),
+      apex_endorsement("apex_endorsement08.jpg"),
+      apex_endorsement("apex_endorsement09.jpg"),
+      apex_endorsement("apex_endorsement10.jpg"),
+      apex_endorsement("apex_endorsement11.jpg")
     ]
   },
+  
+    {
+    title: "Apex Legends- Stories from the Outlands – NorthStar",
+    category: "studio",
+    meta: "Environment — Digital Domain/ Excited to share some backgrounds that I did for the another cinematic: Apex Legends “Northstar”. I was mostly assigned to do some aerial shots and some interior bar shots paintover on 3D rendered passes provided by the client. ",
+    thumbnail: thumb("studio/riot_northstar", "Art_thumb1.jpg"),
+    videos: "https://www.youtube.com/embed/FTk9VD2nPuw?si=5up6Nh211Z0m-KLg",
+    images: [
+      riot_northstar("northstar_sky01.png"),
+      riot_northstar("replay03.mp4"),
+      riot_northstar("northstar_sky02.png"),
+      riot_northstar("replay01.mp4"),
+      riot_northstar("replay05.mp4"),
+      riot_northstar("VL0020_paint_final.png"),
+      riot_northstar("northstar_sky03.png"),
+      riot_northstar("northstar_sky04.png"),
+      riot_northstar("replay04.mp4"),
+      riot_northstar("northstar_bg01.png"),
+      riot_northstar("northstar_bg02.png"),
+      riot_northstar("northstar_bg03.png")
+    ]
+  },
+
   {
     title: "Kenji's Sushi Shop Showdown - Brawl Stars",
     category: "studio",
     meta: "Environment — DoublePlus Studio/ ",
-    thumbnail:`${ASSET_BASE}/images/studio/brawl/brawl_thumb.jpg`,
-   videos: "https://www.youtube.com/embed/Q8D95ErQbjk?si=ki7l54OfUJTek6HP",
+    thumbnail: thumb("studio/brawl", "brawl_thumb.jpg"),
+    videos: "https://www.youtube.com/embed/Q8D95ErQbjk?si=ki7l54OfUJTek6HP",
     images: [
-      { src: `${ASSET_BASE}/images/studio/brawl/Samurai_Dayl.jpg`, caption: "Restaurant Day" },
-      { src: `${ASSET_BASE}/images/studio/brawl/Samurai_night.jpg`, caption: "Restaurant night" },
-      { src: `${ASSET_BASE}/images/studio/brawl/Samurai_backdoor.jpg`, caption: "Backdoor" },
-      { src: `${ASSET_BASE}/images/studio/brawl/Samurai_closet.jpg`, caption: "closet" }
-     
+      brawl("Samurai_Dayl.jpg", "Restaurant Day"),
+      brawl("Samurai_night.jpg", "Restaurant night"),
+      brawl("Samurai_backdoor.jpg", "Backdoor"),
+      brawl("Samurai_closet.jpg", "closet")
     ]
   },
-   {
+
+  {
     title: "Syncron x Ohtani",
     category: "studio",
     meta: "Environment — Mana Animation",
-    thumbnail: "",
+    thumbnail: thumb("studio/syncron", "MVU_StadiumExt_CleansingIsle.jpg"),
     videos: [
       "https://youtu.be/Zu_1_Sd8aCk",
       "https://youtu.be/jk4wEnN98ko",
@@ -252,142 +378,165 @@ const projects = [
       "https://youtu.be/vjT4sz6THdU"
     ],
     images: [
-      { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_CleansingIsle.jpg`, caption: "Stadium seats" },
-      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumExt_Hitter.jpg`, caption: "Hitter" },
-      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumInt_HitPitcher.jpg`, caption: "Stadium Exterior" },
-      { src: `${ASSET_BASE}/images/studio/syncron/OAB_StadiumExt_2nd_3rd_Base.jpg`, caption: "Stadium Exterior" },
-      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumExt_Pitcher_3_4.jpg`, caption: "Pitcher" },
-      { src: `${ASSET_BASE}/images/studio/syncron/MANA_SYNCRON_Kitchen.jpg`, caption: "Kitchen" },
-      { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_B.jpg`, caption: "Stadium" }
+      syncron("MVU_StadiumExt_CleansingIsle.jpg", "Stadium seats"),
+      syncron("OvO_StadiumExt_Hitter.jpg", "Hitter"),
+      syncron("OvO_StadiumInt_HitPitcher.jpg", "Stadium Exterior"),
+      syncron("OAB_StadiumExt_2nd_3rd_Base.jpg", "Stadium Exterior"),
+      syncron("OvO_StadiumExt_Pitcher_3_4.jpg", "Pitcher"),
+      syncron("MANA_SYNCRON_Kitchen.jpg", "Kitchen"),
+      syncron("MVU_StadiumExt_B.jpg", "Stadium")
     ]
   },
-{
-  title: 'Free Fire "Lucha Libre AAA"',
-  category: "studio",
-  meta: "Background Painting — Passion Pictures / Garena Free Fire",
-  images: [
-    { src: "https://cdna.artstation.com/p/assets/images/images/043/925/134/4k/surendra-rajawat-bo-006-paint-210923.jpg?1638632803", caption: "Lucha Libre AAA" },
-    { src: "https://cdnb.artstation.com/p/assets/images/images/043/926/003/original/surendra-rajawat-bo-process.gif?1638635010", caption: "Lucha Libre AAA" },
-    { src: "https://cdna.artstation.com/p/assets/panos/panos/043/925/426/medium/97f3f4b33a8b0c81.jpg?1638633394", caption: "Lucha Libre AAA" },
-    { src: "https://cdna.artstation.com/p/assets/panos/panos/043/925/280/medium/9f353c5d31850a7e.jpg?1638633072", caption: "Lucha Libre AAA" },
-    { src: "https://cdnb.artstation.com/p/assets/images/images/043/925/145/4k/surendra-rajawat-pl-008-211006-v1.jpg?1638632826", caption: "Lucha Libre AAA" },
-    { src: "https://cdnb.artstation.com/p/assets/images/images/043/925/141/large/surendra-rajawat-pl-005-211006-v1.jpg?1638632814", caption: "Lucha Libre AAA" },
-    { src: "https://cdna.artstation.com/p/assets/images/images/043/925/150/4k/surendra-rajawat-smoke-preview1.jpg?1638632836", caption: "Lucha Libre AAA" },
-    { src: "https://cdnb.artstation.com/p/assets/images/images/043/925/163/4k/surendra-rajawat-smoke-preview3.jpg?1638632854", caption: "Lucha Libre AAA" },
-    { src: "https://cdnb.artstation.com/p/assets/images/images/043/925/155/4k/surendra-rajawat-smoke-preview2.jpg?1638632846", caption: "Lucha Libre AAA" }
-  ]
-},
-{
-  title: 'Free Fire "Booyah Day"',
-  category: "studio",
-  meta: "Background Painting — Passion Pictures / Garena Free Fire",
-  video: "https://www.youtube-nocookie.com/embed/WeENy0XYR4E?rel=0",
-  images: [
-    { src: "https://cdnb.artstation.com/p/assets/images/images/048/518/643/4k/surendra-rajawat-sky-bg-clean-220215-small.jpg?1650272419", caption: "Booyah Day" },
-    { src: "https://cdna.artstation.com/p/assets/images/images/048/521/754/4k/surendra-rajawat-qc-001.jpg?1650280124", caption: "Booyah Day" },
-    { src: "https://cdnb.artstation.com/p/assets/images/images/048/521/791/4k/surendra-rajawat-in-008-web.jpg?1650280217", caption: "Booyah Day" },
-    { src: "https://cdna.artstation.com/p/assets/images/images/048/521/782/4k/surendra-rajawat-ch-007.jpg?1650280194", caption: "Booyah Day" },
-    { src: "https://cdna.artstation.com/p/assets/images/images/048/518/646/original/surendra-rajawat-ch-007-crowdsimulation.gif?1650272430", caption: "Crowd anim using 3ds max populate tool" }
-  ]
-},
-{
-  title: "wagamama 'Bowl to Soul'",
-  category: "studio",
-  meta: "Background Painting — Passion Animation Studios / Mullenlowe",
-  thumbnail: `${ASSET_BASE}/images/studio/wagamama/wagamama_thumb.jpg`,
-  video: "https://player.vimeo.com/video/394921700?h=cfb9e93a27&dnt=1",
-  images: [
-    { src: `${ASSET_BASE}/images/studio/wagamama/W_london_shot1.jpg`, caption: "London" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_london_pitch.jpg`, caption: "London" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_rest_pitch.jpg`, caption: "Restaurant Int" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_SC25.jpg`, caption: "Bowl" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_SC17.jpg`, caption: "Restaurant Int" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_Scene_16.jpg`, caption: "Restaurant" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_Scene_14.jpg`, caption: "Bus Stop" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/wagamama_Sc21.jpg`, caption: "Kitchen" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_Sc_08.jpg`, caption: "Kitchen" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_Sc27.jpg`, caption: "Restaurant Int" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_SC38.jpg`, caption: "Restaurant Int" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_SC19.jpg`, caption: "Restaurant Int" },
-    { src: `${ASSET_BASE}/images/studio/wagamama/Wagamama_SC18.jpg`, caption: "Restaurant Int" } 
-  ]
-},
+
+  {
+    title: "Free Fire \"Lucha Libre AAA\"",
+    category: "studio",
+    meta: "Background Painting — Passion Pictures / Garena Free Fire",
+     thumbnail: thumb("studio/freefire", "freefire_luca_thumb.jpg"),
+    video: "https://www.youtube.com/embed/uLUlNmNeKNM?si=R4cwhbwRqXupCp5t",
+    images: [
+      freefire("freefire_luca_bg_sky.jpg", "sky"),
+      freefire("freefire_luca_stage01.jpg", ""),
+      freefire("freefire_luca_stage02.jpg", ""),
+      freefire("freefire_luca_cloud02.jpg", ""),
+      freefire("freefire_video01.mp4", ""),
+      freefire("freefire_video02.mp4", ""),
+      freefire("freefire_video03.mp4", ""),
+      freefire("freefire_video04.mp4", ""),
+      freefire("freefire_luca_stage01_anim.gif", "crowd added in 3ds max")
+    ]
+  },
+
+  {
+    title: "Free Fire \"Booyah Day\"",
+    category: "studio",
+    meta: "Background Painting — Passion Pictures / Garena Free Fire",
+    thumbnail: thumb("studio/booyah", "booyah_thumb.jpg"),
+    video: "https://www.youtube-nocookie.com/embed/WeENy0XYR4E?rel=0",
+    images: [
+      booyah("BO_bgPaint.jpg", "Booyah Day"),
+      booyah("BO_Process.gif", "Booyah Day"),
+      booyah("360DMP_BlueSky_pano02.jpg", "Booyah Day"),
+      booyah("PF_SmokeWave.jpg", "Booyah Day"),
+      booyah("PL_01.jpg", "Booyah Day"),
+      booyah("PL_02.jpg", "Booyah Day"),
+      booyah("PL_03.jpg", "Booyah Day"),
+      booyah("PL_03.jpg", "Booyah Day"),
+      booyah("Smoke_preview1.jpg", "Booyah Day"),
+      booyah("Smoke_preview2.jpg", "Booyah Day"),
+      booyah("Smoke_preview3.jpg", "Booyah Day")
+    ]
+  },
+
+  {
+    title: "wagamama 'Bowl to Soul'",
+    category: "studio",
+    meta: "Background Painting — Passion Animation Studios / Mullenlowe",
+    thumbnail: thumb("studio/wagamama", "wagamama_thumb.jpg"),
+    video: "https://player.vimeo.com/video/394921700?h=cfb9e93a27&dnt=1",
+    images: [
+      wagamama("W_london_shot1.jpg", "London"),
+      wagamama("Wagamama_london_pitch.jpg", "London"),
+      wagamama("Wagamama_rest_pitch.jpg", "Restaurant Int"),
+      wagamama("Wagamama_SC25.jpg", "Bowl"),
+      wagamama("Wagamama_SC17.jpg", "Restaurant Int"),
+      wagamama("Wagamama_Scene_16.jpg", "Restaurant"),
+      wagamama("Wagamama_Scene_14.jpg", "Bus Stop"),
+      wagamama("wagamama_Sc21.jpg", "Kitchen"),
+      wagamama("Wagamama_Sc_08.jpg", "Kitchen"),
+      wagamama("Wagamama_Sc27.jpg", "Restaurant Int"),
+      wagamama("Wagamama_SC38.jpg", "Restaurant Int"),
+      wagamama("Wagamama_SC19.jpg", "Restaurant Int"),
+      wagamama("Wagamama_SC18.jpg", "Restaurant Int")
+    ]
+  },
+
   {
     title: "Ghibli Background Study",
     category: "personal",
     meta: "Background painting — Procreate app",
+    thumbnail: thumb("personal/ghibli", "ghilbi_spritedAway.jpg"),
     images: [
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghilbi_spritedAway.jpg`, caption: "Spirited Away" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_MyNeighbourTotoro01.jpg`, caption: "My Neighbour totoro" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_wmwt.jpg`, caption: "When Marnie was there" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_wmwt02.jpg`, caption: "When Marnie was there- Close Up" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_fromUpOnPoppyHill01.jpg`, caption: "From up on Poppy Hills" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_fromUpOnPoppyHill02.jpg`, caption: "From up on Poppy Hills" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_mononokeHime.jpg`, caption: "Princess Mononoke" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_Arrietty.jpg`, caption: "Arreitty" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_porco_rosso01.jpg`, caption: "Porco Rosso" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_porco_rosso02.jpg`, caption: "Porco Rosso" },
-      { src: `${ASSET_BASE}/images/personal/ghibli/ghibli_whisper-of-the-heart.jpg`, caption: "Whisper of the Heart" },
-      { src: "https://cdn.artstation.com/p/video_sources/000/338/876/when-marnie-was-there-15sec.mp4", caption: "When Marnie was there" }
+      ghibli("ghilbi_spritedAway.jpg", "Spirited Away"),
+      ghibli("ghibli_MyNeighbourTotoro01.jpg", "My Neighbour totoro"),
+      ghibli("ghibli_wmwt.jpg", "When Marnie was there"),
+      ghibli("ghibli_wmwt02.jpg", "When Marnie was there- Close Up"),
+      ghibli("ghibli_fromUpOnPoppyHill01.jpg", "From up on Poppy Hills"),
+      ghibli("ghibli_fromUpOnPoppyHill02.jpg", "From up on Poppy Hills"),
+      ghibli("ghibli_mononokeHime.jpg", "Princess Mononoke"),
+      ghibli("ghibli_Arrietty.jpg", "Arreitty"),
+      ghibli("ghibli_porco_rosso01.jpg", "Porco Rosso"),
+      ghibli("ghibli_porco_rosso02.jpg", "Porco Rosso"),
+      ghibli("ghibli_whisper-of-the-heart.jpg", "Whisper of the Heart")
     ]
   },
-   {
+  {
     title: "Beautiful Day",
     category: "personal",
     meta: "Background painting — Procreate app",
     images: [
-      { src: "https://cdna.artstation.com/p/assets/images/images/036/640/248/large/surendra-rajawat-beautiful-day-web.jpg?1618231920", caption: "Beautiful Day" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/036/640/395/large/surendra-rajawat-beautful-day-ref.jpg?1618232200", caption: "Reference" }
+      beautifulday("beautiful_day.jpg", "Beautiful Day" ),
+      beautifulday("beautiful_day_ref.jpg", "Reference" ),
     ]
   },
   {
-  title: "Riot Domination'",
-  category: "studio",
-  meta: "Background Painting — 2D Studio/ Some background artworks for the RIOT Domination trailer done by the Client 2P Studios",
-  thumbnail: `${ASSET_BASE}/images/studio/domination/dom_lol_thumb.jpg`,
-  video: "https://vimeo.com/865705304/f615f0a7b7?fl=pl&fe=sh",
-  images: [
-    { src: `${ASSET_BASE}/images/studio/domination/dom_lol_bg01.jpg`},
-    { src: `${ASSET_BASE}/iimages/studio/domination/dom_lol_bg02.jpg`},
-    { src: `${ASSET_BASE}/images/studio/domination/dom_lol_bg013.jpg` },
-    { src: `${ASSET_BASE}/images/studio/domination/dom_lol_bg04.jpg` },
-    { src: `${ASSET_BASE}/images/studio/domination/dom_finalview.mp4`, caption: "video cut preview" },
-  ]
-},
+    title: "Morning Light",
+    category: "studio",
+    meta: "Background painting — Procreate app",
+    thumbnail: thumb("studio/procreate","IMG_3500.JPG" ),
+    images: [
+      procreate("IMG_3500.JPG", "Beautiful Day" ),
+    ]
+  },
+  {
+    title: "Riot Domination",
+    category: "studio",
+    meta: "Background Painting — 2D Studio/ Some background artworks for the RIOT Domination trailer done by the Client 2P Studios",
+    thumbnail:thumb("studio/riot_domination", "dom_lol_thumb.jpg"),
+    video: "https://vimeo.com/865705304/f615f0a7b7?fl=pl&fe=sh",
+    images: [
+      riot_domination("dom_lol_bg01.jpg"),
+      riot_domination("dom_lol_bg02.jpg"),
+      riot_domination("dom_lol_bg03.jpg"),
+      riot_domination("dom_finalview.mp4", "video cut preview")
+    ]
+  },
   {
     title: "Lofi Girl- Album Art",
     category: "album",
-    meta: "Album Art —, replace with your own tile set",
+    
+    meta: "Album Art — replace with your own tile set",
+    thumbnail:thumb("album/lofiGirl", "FindingBeauty_islandinTheSky.jpg"),
     images: [
-      { src: "https://cdna.artstation.com/p/assets/images/images/059/146/376/4k/surendra-rajawat-asset.jpg?1675747101", caption: "Dosi x Wishes & dreams album art" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/059/130/495/4k/surendra-rajawat-asset.jpg?1675710800", caption: "Moving On” by TibeautheTraveler" },
-      { src: "https://cdna.artstation.com/p/assets/images/images/059/130/098/4k/surendra-rajawat-asset.jpg?1675710309", caption: " “samsara” album by Eleven" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/055/421/875/4k/surendra-rajawat-20220212-065937081-ios.jpg?1666897801", caption: "DaniSogen - The Magic Unfolds " },
-      { src: "https://cdna.artstation.com/p/assets/images/images/037/023/838/4k/surendra-rajawat-forest.jpg?1619270461", caption: "Raimu - Sons of the Dew" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/058/616/273/4k/surendra-rajawat-finding-light.jpg?1674578918", caption: "Kainbeats - Finding Light" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/058/615/791/4k/surendra-rajawat-untitled-artwork-15-1.jpg?1674578144", caption: "Mindeliq x Neele Harder - New Horizons" },
-      { src: "https://cdna.artstation.com/p/assets/images/images/058/615/776/4k/surendra-rajawat-untitled-artwork-8.jpg?1674578133", caption: "Yasumu - Unravel" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/058/615/339/4k/surendra-rajawat-20220812-093058912-ios.jpg?1674577439", caption: "Tenno - Mind Temple" },
-      { src: "https://cdna.artstation.com/p/assets/images/images/058/615/052/4k/surendra-rajawat-untitled-artwork-14-2.jpg?1674576941", caption: "Bcalm x Banks - Feelings" },
-      { src: "https://cdna.artstation.com/p/assets/images/images/037/807/416/4k/surendra-rajawat-island-in-the-sky-16-9.jpg?1621367803", caption: "Finding Beauty: Island In the Sky" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/055/422/053/4k/surendra-rajawat-untitled-artwork-7.jpg?1666897257", caption: "Goson x Dreamfield - Dreams of Angels" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/040/554/047/4k/surendra-rajawat-dream.jpg?1629209288", caption: "Amess - A place above heaven" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/058/614/685/4k/surendra-rajawat-untitled-artwork-1-3.jpg?1674576510", caption: "Loafy Building - Butterflies" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/048/798/257/4k/surendra-rajawat-tatami-construct-mommyhilfiger.jpg?1650973416", caption: "Tatami Contruct- mommy Hilfiger" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/048/798/373/4k/surendra-rajawat-mondo-loops-amidst-the-seven-seas.jpg?1650973664", caption: "Mondo_loops_Amidst_The_Seven_Seas" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/042/976/649/4k/surendra-rajawat-himalaya-web.jpg?1635953327", caption: "Krynoze- Himalaya" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/037/807/405/4k/surendra-rajawat-high-flying.jpg?1621367775", caption: "Loafy Building - High Flying" },
-      { src: "https://cdna.artstation.com/p/assets/images/images/042/976/906/4k/surendra-rajawat-sun-swells-web.jpg?1635953630", caption: "Sun Swells" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/058/615/347/4k/surendra-rajawat-20220731-072049131-ios.jpg?1674577448", caption: "No Spirit - Between Worlds" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/048/841/269/4k/surendra-rajawat-untitled-artwork-6.jpg?1651065788", caption: "Nature's Beauty" },
-      { src: "https://cdna.artstation.com/p/assets/images/images/055/421/806/4k/surendra-rajawat-20220215-093757626-ios.jpg?1666896673", caption: "LightSaber Bar" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/042/977/157/4k/surendra-rajawat-journals-aer-web.jpg?1635954017", caption: "AER- Journals" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/048/841/277/4k/surendra-rajawat-untitled-artwork-13.jpg?1651065803", caption: "Leaving This Place" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/048/799/397/4k/surendra-rajawat-untitled-artwork-3-1.jpg?1650975323", caption: "Kainbeats - Atlantis" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/040/554/057/4k/surendra-rajawat-safar-16-9.jpg?1629209250", caption: "l'Outlander - Massa" },
-      { src: "https://cdnb.artstation.com/p/assets/images/images/040/554/051/4k/surendra-rajawat-tohf8492.jpg?1629209243", caption: "tender spring - Springtime, with friends" },
-      { src: "", caption: "", placeholder: true }
-      
+      lofigirl("FindingBeauty_islandinTheSky.jpg", "Finding Beauty"),
+      lofigirl("", "Moving On by TibeautheTraveler"),
+      lofigirl("", "samsara album by Eleven"),
+      lofigirl("", "DaniSogen - The Magic Unfolds"),
+      lofigirl("", "Raimu - Sons of the Dew"),
+      lofigirl("", "Kainbeats - Finding Light"),
+      lofigirl("MindeliqxNeeleHarder_NewHorizon.jpg", "Mindeliq x Neele Harder - New Horizon"),
+      lofigirl("", "Yasumu - Unravel"),
+      lofigirl("", "Tenno - Mind Temple"),
+      lofigirl("", "Bcalm x Banks - Feelings"),
+      lofigirl("", "Finding Beauty: Island In the Sky"),
+      lofigirl("", "Goson x Dreamfield - Dreams of Angels"),
+      lofigirl("Amess_Dream.JPG", "Amess - A place above heaven"),
+      lofigirl("", "Loafy Building - Butterflies"),
+      lofigirl("tatami_construct_mommyhilfiger.jpg", "Tatami Construct- Mommy Hilfiger"),
+      lofigirl("Mondo_loops_Amidst_The_Seven_Seas.jpg", "Mondo Loops-Amidst The Seven Seas"),
+      lofigirl("Krynoze_Himalaya.jpg", "Krynoze- Himalaya"),
+      lofigirl("LoafyBuilding_HighFlying.JPG", "Loafy Building - High Flying"),
+      lofigirl("Sun_Swells.jpg", "Sun Swells"),
+      lofigirl("", "No Spirit - Between Worlds"),
+      lofigirl("", "Nature's Beauty"),
+      lofigirl("", "LightSaber Bar"),
+      lofigirl("Journals_AER.jpg", "AER- Journals"),
+      lofigirl("", "Leaving This Place"),
+      lofigirl("", "Kainbeats - Atlantis"),
+      lofigirl("outlander_massa.JPG", "l'Outlander - Massa"),
+      lofigirl("tenderSpring.JPG", "tender spring - Springtime, with friends"),
+      lofigirl("Celestial_%20Alignment_Heading_Home.jpg", "Amess - Celestial Alignment-Heading Home"),
+      lofigirl("SNUGxNuve_nightfall.JPG", "S N U G x Nuve- Nightfall")
     ]
   }
 ];
@@ -395,8 +544,8 @@ const projects = [
 /* ==================== CINEMATICS ==================== */
 const cinematics = [
   {
-    id:"booyah",
-    title: '"Free Fire: Booyah Day"',
+    id: "booyah",
+    title: "\"Free Fire: Booyah Day\"",
     desc: "Cinematic work created with Passion Pictures.",
     credit: "Director: Jon Saunders · Client: Passion Animation Studios",
     role: "Background Painting",
@@ -406,7 +555,7 @@ const cinematics = [
     embed: "https://www.youtube-nocookie.com/embed/WeENy0XYR4E?rel=0"
   },
   {
-    id:"absolution",
+    id: "absolution",
     title: "Absolution | Sentinels of Light 2021 — League of Legends",
     desc: "Background paintovers on a 3D base for the LoL Absolution cinematic.",
     credit: "Produced by: Axis Studio · Client: Riot Games",
@@ -417,7 +566,7 @@ const cinematics = [
     embed: "https://www.youtube-nocookie.com/embed/a8h1BTe45AU?rel=0"
   },
   {
-    id:"phoenixmancers",
+    id: "phoenixmancers",
     title: "League of Legends: Phoenixmancers",
     desc: "Background paintings for the Phoenixmancers cinematic.",
     credit: "Art Director: Nicolas Dehghani · Studio: WIZZ @ Quad Group · Client: Tencent, Riot Games",
@@ -428,13 +577,13 @@ const cinematics = [
     embed: "https://www.youtube-nocookie.com/embed/ES5ah68iyxA?rel=0"
   },
   {
-    title: 'Apex Legends | Stories from the Outlands — "Northstar"',
+    title: "Apex Legends | Stories from the Outlands — \"Northstar\"",
     desc: "Sky panoramic shots for the Northstar short.",
     credit: "By Digital Domain",
     embed: "https://www.youtube-nocookie.com/embed/FTk9VD2nPuw?rel=0"
   },
   {
-    id:"wagamama",
+    id: "wagamama",
     title: "Wagamama 'Bowl to Soul' — London",
     desc: "Visual development and background creation for the campaign.",
     credit: "Production: Passion Animation Studios · Agency: Mullenlowe · Director: Mads Broni",
@@ -445,19 +594,19 @@ const cinematics = [
     embed: "https://player.vimeo.com/video/394921700?h=cfb9e93a27&dnt=1"
   },
   {
-    title: 'Apex Legends | Stories from the Outlands — "The Endorsement"',
+    title: "Apex Legends | Stories from the Outlands — \"The Endorsement\"",
     desc: "Background paintovers on a 3D base, alongside fellow artists.",
     credit: "By Passion Pictures, UK · Director: Mads Broni",
     embed: "https://www.youtube-nocookie.com/embed/M9Pmf9AB4Mo?rel=0"
   },
   {
-    title: '"Start Counting" — Chobani Probiotic',
+    title: "\"Start Counting\" — Chobani Probiotic",
     desc: "Background work for the campaign spot.",
     credit: "By The Line Animation · Director: Bjørn-Erik Aschim · Art Direction: Pedro Antoine",
     embed: "https://www.youtube-nocookie.com/embed/xWMJU-WFTxQ?rel=0"
   },
   {
-    title: '"Facebook — Good Ideas Deserve to be Found"',
+    title: "\"Facebook — Good Ideas Deserve to be Found\"",
     desc: "Backgrounds for the Japanese market edit.",
     credit: "Directed by David Wilson · Produced by Riff Raff Films",
     embed: "https://player.vimeo.com/video/519042929?h=33147b0dfd&dnt=1"
