@@ -489,7 +489,7 @@ const projects = [
     ]
   },
   {
-    title: "Riot Domination",
+    title: "Riot - Domniation",
     category: "studio",
     meta: "Background Painting — 2D Studio/ Some background artworks for the RIOT Domination trailer done by the Client 2P Studios",
     thumbnail:thumb("studio/riot_domination", "dom_lol_thumb.jpg"),
