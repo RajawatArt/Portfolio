@@ -463,6 +463,7 @@ const projects = [
     title: "Ghibli Background Study",
     category: "personal",
     meta: "Background painting — Procreate app",
+    layout: "tiles",
     thumbnail: thumb("personal/ghibli", "ghilbi_spritedAway.jpg"),
     images: [
       ghibli("ghilbi_spritedAway.jpg", "Spirited Away"),
@@ -562,6 +563,7 @@ const projects = [
     title: "Photo Study",
     category: "personal",
     meta: " Photo Study on Procreate app/ Some based on the pictures I took during travel",
+    layout: "tiles",
     images: [
       photostudy("after_dark.JPG",), photostudy("rainy_day.JPG",  ), photostudy("rainy_day02.JPG", ),
       photostudy("miyajima_hiroshima.JPG", ), photostudy("Winter_rising.jpg", ), photostudy("hongkong_shop.JPG", ),
@@ -591,6 +593,7 @@ const projects = [
     title: "Sketches",
     category: "personal",
     meta: "Sketches on Procreate app/",
+    layout: "tiles",
     images: [
       sketch("sketch01_tree.JPG",), sketch("sketch02_tree.JPG", ), sketch("sketch03_moss.JPG",),
       sketch("sketch04_rocks.JPG",), sketch("sketch05_forest.JPG", ), sketch("sketch16_torii.JPG",),
