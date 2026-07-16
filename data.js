@@ -71,6 +71,14 @@ const northernlights = createHelper("images/personal/Northern_Lights");
 
 // ==================== ALBUM ART ====================
 const lofigirl = createHelper("images/album/lofiGirl");
+const raimu = createHelper("images/album/Raimu");
+
+
+
+// ====================PROJECTS ====================
+
+
+
 
 const projects = [
   {
@@ -79,12 +87,9 @@ const projects = [
     meta: "Background Painting — Brazen Animation Studio",
     thumbnail: thumb("studio/mtg", "mtg_thumb.jpg"),
     images: [
-      mtg("fieldGrass_A.jpg", "Main BG — Field grass"),
-      mtg("fieldGrass_B.jpg", "Transition — Field grass"),
-      mtg("cityPath.jpg", "City path"),
-      mtg("fieldGrassFlies.jpg", "Field grass, flies"),
-      mtg("cityStatue.jpg", "City statue"),
-      mtg("forestWide.jpg", "Forest, wide"),
+      mtg("fieldGrass_A.jpg", "Main BG — Field grass"), mtg("fieldGrass_B.jpg", "Transition — Field grass"),
+      mtg("cityPath.jpg", "City path"), mtg("fieldGrassFlies.jpg", "Field grass, flies"),
+      mtg("cityStatue.jpg", "City statue"), mtg("forestWide.jpg", "Forest, wide"),
       mtg("fieldBattleReverse.jpg", "Field battle, reverse angle")
     ]
   },
@@ -95,12 +100,8 @@ const projects = [
     meta: "Fan Art — GOY Artbook, Sony PlayStation Germany",
     thumbnail: thumb("personal/ghost_of_yotie", "goy_ride.jpg"),
     images: [
-      goy("goy_ride.jpg", "Ride"),
-      goy("goy_duel.jpg", "Duel"),
-      goy("goy_mountain.jpg", "Rest"),
-      goy("goy_onsen.jpg", "Onsen"),
-      goy("goy_bookpage.jpg", "book"),
-      goy("goy_book.jpg", "book")
+      goy("goy_ride.jpg", "Ride"),  goy("goy_duel.jpg", "Duel"), goy("goy_mountain.jpg", "Rest"),
+      goy("goy_onsen.jpg", "Onsen"), goy("goy_bookpage.jpg", "book"), goy("goy_book.jpg", "book")
     ]
   },
 
@@ -131,11 +132,8 @@ const projects = [
     thumbnail: thumb("studio/bazaar", "BZ_thumb.jpg"),
     video: "https://vimeo.com/954096994",
     images: [
-      bazaar("01.jpg", "Harbour"),
-      bazaar("BG_Alley.jpg", "Alley"),
-      bazaar("02.jpg", "City Entrance"),
-      bazaar("Mak_lab.jpg", "Mak Lab"),
-      bazaar("Bazaar_colorScript.jpg", "Colour Script")
+      bazaar("01.jpg", "Harbour"), bazaar("BG_Alley.jpg", "Alley"),
+      bazaar("02.jpg", "City Entrance"),  bazaar("Mak_lab.jpg", "Mak Lab"),  bazaar("Bazaar_colorScript.jpg", "Colour Script")
     ]
   },
 
@@ -146,12 +144,9 @@ const projects = [
     thumbnail: thumb("studio/hayday", "hyd_thumb.jpg"),
     video: "https://youtu.be/otQ6kAZJXcY",
     images: [
-      hayday("hdy01.jpg", "Windmill"),
-      hayday("hdy04.jpg", "House front"),
-      hayday("hdy02.jpg", "Fence"),
-      hayday("hdy03.jpg", "Soil"),
-      hayday("hdy04.jpg", "House door Opened"),
-      hayday("hdy06.jpg", "Ground"),
+      hayday("hdy01.jpg", "Windmill"), hayday("hdy04.jpg", "House front"),
+      hayday("hdy02.jpg", "Fence"),  hayday("hdy03.jpg", "Soil"),
+      hayday("hdy04.jpg", "House door Opened"), hayday("hdy06.jpg", "Ground"),
       hayday("hdy_101_0010_060_bgPaint_v04.mp4", "Background paint process")
     ]
   },
@@ -162,25 +157,12 @@ const projects = [
     meta: "Background Paint — Sun Creature / 2K Games",
     thumbnail: thumb("studio/midnight", "midnight_thumb.jpg"),
     images: [
-      midnight("salem_sisters.jpg", "Salem Sisters"),
-      midnight("mms_01.jpg", "City Street"),
-      midnight("mms_02.jpg", "door"),
-      midnight("mms_03.jpg"),
-      midnight("mms_04.jpg"),
-      midnight("mms_05.jpg"),
-      midnight("mms_06.jpg"),
-      midnight("mms_07.jpg"),
-      midnight("mms_08.jpg"),
-      midnight("mms_09.jpg"),
-      midnight("mms_10.jpg"),
-      midnight("mms_11.jpg"),
-      midnight("mms_12.jpg"),
-      midnight("mms_13.jpg"),
-      midnight("mms_14.jpg"),
-      midnight("mms_15.jpg"),
-      midnight("mms_16.jpg"),
-      midnight("mms_17.jpg"),
-      midnight("mms_18.jpg"),
+      midnight("salem_sisters.jpg", "Salem Sisters"), midnight("mms_01.jpg", "City Street"),  midnight("mms_02.jpg", "door"),
+      midnight("mms_03.jpg"), midnight("mms_04.jpg"), midnight("mms_05.jpg"), midnight("mms_06.jpg"),
+      midnight("mms_07.jpg"), midnight("mms_08.jpg"), midnight("mms_09.jpg"),
+      midnight("mms_10.jpg"), midnight("mms_11.jpg"), midnight("mms_12.jpg"),
+      midnight("mms_13.jpg"), midnight("mms_14.jpg"), midnight("mms_15.jpg"),
+      midnight("mms_16.jpg"), midnight("mms_17.jpg"), midnight("mms_18.jpg"),
       midnight("Process_preview.gif", "Process Preview")
     ]
   },
@@ -192,8 +174,7 @@ const projects = [
     thumbnail: thumb("studio/valorant_vibes", "vibes_thumb.jpg"),
     video: "https://youtu.be/nEFcbKF4WfY",
     images: [
-      valorant_vibes("vibes_classroom.jpg", "Return to Valoran City"),
-      valorant_vibes("vibes_piano.jpg", "Piano")
+      valorant_vibes("vibes_classroom.jpg", "Return to Valoran City"),  valorant_vibes("vibes_piano.jpg", "Piano")
     ]
   },
 
@@ -204,32 +185,24 @@ const projects = [
     thumbnail: thumb("studio/goldenwolf", "trainline_thumb.jpg"),
     video: "https://vimeo.com/763817515",
     images: [
-      trainline("trainline01.jpg", "I Came By Train"),
-      trainline("trainline02.jpg", "Better Days"),
-      trainline("trainline03.jpg", "Better Days"),
-      trainline("trainline04.jpg", "Better Days"),
-      trainline("trainline05.jpg", "Better Days"),
-      trainline("trainline06.jpg", "Better Days"),
-      trainline("trainline07.jpg", "Better Days"),
-      trainline("trainline08.jpg", "Better Days"),
-      trainline("trainline09.jpg", "Better Days"),
-      trainline("trainline10.jpg", "Better Days")
+      trainline("trainline01.jpg", "I Came By Train"),  trainline("trainline02.jpg", "Better Days"),
+      trainline("trainline03.jpg", "Better Days"), trainline("trainline04.jpg", "Better Days"),
+      trainline("trainline05.jpg", "Better Days"), trainline("trainline06.jpg", "Better Days"),
+      trainline("trainline07.jpg", "Better Days"),  trainline("trainline08.jpg", "Better Days"),
+      trainline("trainline09.jpg", "Better Days"),  trainline("trainline10.jpg", "Better Days")
     ]
   },
 
   {
-    title: "League of Legends: Phoenixmancers Backgrounds",
+    title: "League of Legends: Phoenixmancers",
     category: "studio",
     meta: "Background Painting — WIZZ @ Quad Group / Riot Games",
     thumbnail: thumb("studio/wizz", "Phoenixmancers_thumb.jpg"),
     video: "https://www.youtube-nocookie.com/embed/ES5ah68iyxA?rel=0",
     images: [
-      phoenix("Phoenixmancers_BG01.jpg", "Phoenixmancers"),
-      phoenix("Phoenixmancers_BG02.jpg", "Phoenixmancers"),
-      phoenix("Phoenixmancers_BG03.jpg", "Phoenixmancers"),
-      phoenix("Phoenixmancers_BG04.jpg", "Phoenixmancers"),
-      phoenix("Phoenixmancers_BG05.jpg", "Phoenixmancers"),
-      phoenix("Phoenixmancers_BG06.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG01.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG02.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG03.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG04.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG05.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG06.jpg", "Phoenixmancers"),
       phoenix("Phoenixmancers_Process_gif.gif", "Process")
     ]
   },
@@ -367,10 +340,8 @@ const projects = [
     thumbnail: thumb("studio/brawl", "brawl_thumb.jpg"),
     videos: "https://www.youtube.com/embed/Q8D95ErQbjk?si=ki7l54OfUJTek6HP",
     images: [
-      brawl("Samurai_Dayl.jpg", "Restaurant Day"),
-      brawl("Samurai_night.jpg", "Restaurant night"),
-      brawl("Samurai_backdoor.jpg", "Backdoor"),
-      brawl("Samurai_closet.jpg", "closet")
+      brawl("Samurai_Dayl.jpg", "Restaurant Day"), brawl("Samurai_night.jpg", "Restaurant night"),
+      brawl("Samurai_backdoor.jpg", "Backdoor"), brawl("Samurai_closet.jpg", "closet")
     ]
   },
 
@@ -380,24 +351,19 @@ const projects = [
     meta: "Environment — Mana Animation",
     thumbnail: thumb("studio/syncron", "MVU_StadiumExt_CleansingIsle.jpg"),
     videos: [
-      "https://youtu.be/Zu_1_Sd8aCk",
-      "https://youtu.be/jk4wEnN98ko",
-      "https://youtu.be/iXe6N4cvsCY",
-      "https://youtu.be/vjT4sz6THdU"
+      "https://youtu.be/Zu_1_Sd8aCk", "https://youtu.be/jk4wEnN98ko",
+      "https://youtu.be/iXe6N4cvsCY", "https://youtu.be/vjT4sz6THdU"
     ],
     images: [
-      syncron("MVU_StadiumExt_CleansingIsle.jpg", "Stadium seats"),
-      syncron("OvO_StadiumExt_Hitter.jpg", "Hitter"),
-      syncron("OvO_StadiumInt_HitPitcher.jpg", "Stadium Exterior"),
-      syncron("OAB_StadiumExt_2nd_3rd_Base.jpg", "Stadium Exterior"),
-      syncron("OvO_StadiumExt_Pitcher_3_4.jpg", "Pitcher"),
-      syncron("MANA_SYNCRON_Kitchen.jpg", "Kitchen"),
+      syncron("MVU_StadiumExt_CleansingIsle.jpg", "Stadium seats"), syncron("OvO_StadiumExt_Hitter.jpg", "Hitter"),
+      syncron("OvO_StadiumInt_HitPitcher.jpg", "Stadium Exterior"), syncron("OAB_StadiumExt_2nd_3rd_Base.jpg", "Stadium Exterior"),
+      syncron("OvO_StadiumExt_Pitcher_3_4.jpg", "Pitcher"), syncron("MANA_SYNCRON_Kitchen.jpg", "Kitchen"),
       syncron("MVU_StadiumExt_B.jpg", "Stadium")
     ]
   },
 
   {
-    title: "Free Fire \"Lucha Libre AAA\"",
+    title: "FreeFire : Lucha Libre AAA",
     category: "studio",
     meta: "Background Painting — Passion Pictures / Garena Free Fire",
      thumbnail: thumb("studio/freefire", "freefire_luca_thumb.jpg"),
@@ -416,7 +382,7 @@ const projects = [
   },
 
   {
-    title: "Free Fire \"Booyah Day\"",
+    title: "FreeFire : Booyah Day",
     category: "studio",
     meta: "Background Painting — Passion Pictures / Garena Free Fire",
     thumbnail: thumb("studio/booyah", "booyah_thumb.jpg"),
@@ -437,9 +403,9 @@ const projects = [
   },
 
   {
-    title: "wagamama 'Bowl to Soul'",
+    title: "Wagamama 'Bowl to Soul'",
     category: "studio",
-    meta: "Background Painting — Passion Animation Studios / Mullenlowe",
+    meta: "Background concepts — Some Restaurant and kitchen shots done forthe wagamama 'Bowl to Soul' film by Passion Animation Studio Animation Studios /Agency-Mullenlowe/ Director- Mads Broni",
     thumbnail: thumb("studio/wagamama", "wagamama_thumb.jpg"),
     video: "https://player.vimeo.com/video/394921700?h=cfb9e93a27&dnt=1",
     images: [
@@ -504,10 +470,8 @@ const projects = [
     thumbnail:thumb("studio/riot_domination", "dom_lol_thumb.jpg"),
     video: "https://vimeo.com/865705304/f615f0a7b7?fl=pl&fe=sh",
     images: [
-      riot_domination("dom_lol_bg01.jpg"),
-      riot_domination("dom_lol_bg02.jpg"),
-      riot_domination("dom_lol_bg03.jpg"),
-      riot_domination("dom_finalview.mp4", "video cut preview")
+      riot_domination("dom_lol_bg01.jpg"), riot_domination("dom_lol_bg02.jpg"),
+      riot_domination("dom_lol_bg03.jpg"), riot_domination("dom_finalview.mp4", "video cut preview")
     ]
   },
   {
@@ -518,36 +482,81 @@ const projects = [
     thumbnail:thumb("album/lofiGirl", "FindingBeauty_islandinTheSky.jpg"),
     images: [
       lofigirl("FindingBeauty_islandinTheSky.jpg", "Finding Beauty"),
-      lofigirl("", "Moving On by TibeautheTraveler"),
-      lofigirl("", "samsara album by Eleven"),
-      lofigirl("", "DaniSogen - The Magic Unfolds"),
-      lofigirl("", "Raimu - Sons of the Dew"),
-      lofigirl("", "Kainbeats - Finding Light"),
+      lofigirl("Moving_On_Tibeauthetraveler.jpg", "Moving On by TibeautheTraveler"),
+      lofigirl("Samsara_Eleven_AlbumArt.jpg", "samsara album by Eleven"),
+      lofigirl("DaniSogen_TheMagicUnfolds.jpg", "DaniSogen - The Magic Unfolds"),
+      lofigirl("Finding_Light.jpg", "Kainbeats - Finding Light"),
       lofigirl("MindeliqxNeeleHarder_NewHorizon.jpg", "Mindeliq x Neele Harder - New Horizon"),
-      lofigirl("", "Yasumu - Unravel"),
-      lofigirl("", "Tenno - Mind Temple"),
-      lofigirl("", "Bcalm x Banks - Feelings"),
-      lofigirl("", "Finding Beauty: Island In the Sky"),
-      lofigirl("", "Goson x Dreamfield - Dreams of Angels"),
+      lofigirl("Yasumu_Unravel.jpg", "Yasumu - Unravel"),
+      lofigirl("Tenno_MindTemple.jpg", "Tenno - Mind Temple"),
+      lofigirl("BcalmxBanks_Feelings.jpg", "Bcalm x Banks - Feelings"),
+      lofigirl("Goson_Dreamfield_albumArt.jpg", "Goson x Dreamfield - Dreams of Angels"),
       lofigirl("Amess_Dream.JPG", "Amess - A place above heaven"),
-      lofigirl("", "Loafy Building - Butterflies"),
+      lofigirl("LoafyBuilding_Butterflies.jpg", "Loafy Building - Butterflies"),
       lofigirl("tatami_construct_mommyhilfiger.jpg", "Tatami Construct- Mommy Hilfiger"),
       lofigirl("Mondo_loops_Amidst_The_Seven_Seas.jpg", "Mondo Loops-Amidst The Seven Seas"),
       lofigirl("Krynoze_Himalaya.jpg", "Krynoze- Himalaya"),
       lofigirl("LoafyBuilding_HighFlying.JPG", "Loafy Building - High Flying"),
       lofigirl("Sun_Swells.jpg", "Sun Swells"),
-      lofigirl("", "No Spirit - Between Worlds"),
-      lofigirl("", "Nature's Beauty"),
-      lofigirl("", "LightSaber Bar"),
+      lofigirl("NoSpirit_BetweenWorlds.jpg", "No Spirit - Between Worlds"),
+      lofigirl("NaturesBeauty.jpg", "Nature's Beauty"),
+      lofigirl("Gpds_traveller.jpg", "Traveller"),
       lofigirl("Journals_AER.jpg", "AER- Journals"),
-      lofigirl("", "Leaving This Place"),
-      lofigirl("", "Kainbeats - Atlantis"),
+      lofigirl("Leaving_this_Place.jpg", "Leaving This Place"),
+      lofigirl("Kainbeats_Atlantis.jpg", "Kainbeats - Atlantis"),
       lofigirl("outlander_massa.JPG", "l'Outlander - Massa"),
       lofigirl("tenderSpring.JPG", "tender spring - Springtime, with friends"),
-      lofigirl("Celestial_%20Alignment_Heading_Home.jpg", "Amess - Celestial Alignment-Heading Home"),
-      lofigirl("SNUGxNuve_nightfall.JPG", "S N U G x Nuve- Nightfall")
+      lofigirl("Celestial_ Alignment_Heading_Home.jpg", "Amess - Celestial Alignment-Heading Home"),
+      lofigirl("SNUGxNuve_nightfall.JPG", "S N U G x Nuve- Nightfall"),
+      lofigirl("Gpds_traveller.jpg", "Traveller v01"),
+      lofigirl("Gpds_traveller_v02.jpg", "Traveller v02"),
+      lofigirl("Henry_LoafyBuilding_0834.jpg", "Traveller"),
+      lofigirl("Jazz_the_chilled.jpg", " Jazz Chilled"),
+      lofigirl("Julian_Throne.jpg", "Throne"),
+      lofigirl("Kabes_Dosi_wishes_and_Dreams.jpg", "WIshes and Dreams"),
+      lofigirl("Krynoze_medieval.jpg", "Medieval"),
+      lofigirl("LennyLoops_nitewalk_darkAmbient.jpg", "Night walk"),
+      lofigirl("Living_Room_Asian.jpg", "Torii"),
+      lofigirl("Luca_Verdant_Fragments.jpg", "Fragments"),
+      lofigirl("Moving_On_Tibeauthetraveler.jpg", "Moving On"),
+      lofigirl("NoSpirit_Sprintime.jpg", "Spring Time"),
+      lofigirl("A_castle_in_the_Sky_Simon.jpg", "A Castle in the Sky"),
+      lofigirl("Amess_Dream.JPG", "Dream"),
+      lofigirl("Asian_aftenoon_Nara.jpg", "Nara"),
+      lofigirl("Asian_johnlee_korea.jpg", "Korea"),
+      lofigirl("Asian_livingroom_Magic_of_the_mountains.jpg", "magic of the Mountains"),
+      lofigirl("Asian_seathmusic_battlefield_16_9.jpg", "Battefield"),
+      lofigirl("Charlee_underwater.jpg", "Underwater"),
+      lofigirl("D0d_untold_stories_Medieval_.jpg", "Untold Stories"),
+      lofigirl("DarkAmbient_sG.jpg", "Dark Ambient"),
+      lofigirl("Dark_ambient_luvpug.jpg", "Dark ambient Luvpug"),
+      lofigirl("Dimensions32_TheLegendOfOrpheus.jpg", "The Legend of the Orpheus"),
+      lofigirl("Downtown_Binary_Album.jpg", "Downtown binary"),
+      lofigirl("Downtown_Binary_rain.jpg", "Rain"),
+      lofigirl("Downtown_binary_norway_albumArt.jpg", "Norway"),
+      lofigirl("Dreams_in_the_mist_krynoze.jpg", "Dream in the Mist"),
+      lofigirl("Drwamwalker_oscillations.jpg", "Oscillation"),
+      lofigirl("Elijah_Casiio_Additions.jpg", "Additions"),
+      lofigirl("FredpaciMusic_MedievalLoFi.jpg", "FredPacimusic"),
+      lofigirl("Seeyouthere_nitewalk.jpg", "See you there- Nitewalk"),
+      lofigirl("Sheathmusic_Realms_Unveiled_in_Reverie.jpg", "Realms Unveiled in Reverie"),
+      lofigirl("Sleep_afternoon_SailboatAndConstellations.jpg", "Sailboat and Constellations"),
+      lofigirl("Sleepermane_Habitual.jpg", "Habitual- Sleepermane"),
+      lofigirl("SolarBody_YOTD.jpg", "SolarBody- YOTD"),
+      lofigirl("Starfield_lofiGirl.jpg", "Starfield"),
+      lofigirl("Synthwave_D0D_Odyssey.jpg", "Odyssey"),
+      lofigirl("Synthwave_Fusion_of_worlds.jpg", "Synthwave- Fusion of the worlds"),
+      lofigirl("Synthwave_Temporal_Odyssey.jpg", "Synthwave- Temporal Odyssey"),
+      lofigirl("Tenno_SleepWalker.jpg", "Tenno- Sleepwalker"),
+      lofigirl("TheSearchforPlanet_16_9.jpg", "The search for the Planet"),
+      lofigirl("Traces_of_us_sleepSteezy.jpg", "SleepSteezy- Traces of Us"),
+      lofigirl("WishesAndDreams_Dreamland.jpg", "Wishes and Dreams- Dreamland"),
+      lofigirl("Wistful_grove_hotpotstoes.jpg", "Hotpotstoes- Wishful grove"),
+      lofigirl("Gpds_travellepg", "Traveller")
+        
     ]
   },
+  
    {
     title: "Sekiro FanArt",
     category: "personal",
@@ -629,6 +638,15 @@ const projects = [
       tsushima("got_10.JPG", ), tsushima("got_7.JPG", ), tsushima("got_08.JPG", )
     ]
   }, 
+   {
+    title: "Raimu: Album Art",
+    category: "album",
+    meta: "Album art for lofi music albums by Raimu",
+     thumbnail: thumb("album/Raimu", "Raimuforest.jpg"),
+    images: [
+      raimu("Raimuforest.jpg", "Forest" ), raimu("Raimu_torii.jpg", "Raimu Torii" ),
+    ]
+  },
       {
     title: "Still Life",
     category: "personal",
