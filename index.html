@@ -115,8 +115,8 @@
   .lightbox-nav:hover{ color:var(--accent); border-color:var(--accent); }
   .lightbox-prev{ left:-1rem; } .lightbox-next{ right:-1rem; }
   .lightbox-nav[hidden]{ display:none; }
-  .lightbox-thumbs{ position:absolute; left:0; right:0; bottom:0; display:flex; gap:.6rem; padding:1rem 2vw; overflow-x:auto; background:rgba(6,6,5,.85); border-top:1px solid var(--line); }
-  .lightbox-thumbs img{ width:64px; height:64px; object-fit:cover; flex-shrink:0; cursor:pointer; opacity:.5; border:2px solid transparent; transition:opacity .2s ease, border-color .2s ease; }
+  .lightbox-thumbs{ position:absolute; left:0; right:0; bottom:0; display:flex; justify-content:flex-start; align-items:center; gap:.5rem; padding:1rem 2vw; overflow-x:auto; background:rgba(6,6,5,.85); border-top:1px solid var(--line); }
+  .lightbox-thumbs img{ width:64px; height:64px; object-fit:cover; flex:0 0 auto; cursor:pointer; opacity:.5; border:2px solid transparent; transition:opacity .2s ease, border-color .2s ease; }
   .lightbox-thumbs img:hover{ opacity:.85; }
   .lightbox-thumbs img.active{ opacity:1; border-color:var(--accent); }
   .lightbox-thumbs[hidden]{ display:none; }
@@ -359,13 +359,14 @@
 <!-- ============ WORK ============ -->
 <div class="tab-panel active" id="panel-work">
 
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="studio">Studio Work</button>
+    <button class="filter-btn" data-filter="personal">Personal Work</button>
+    <button class="filter-btn" data-filter="album">Album Art</button>
+  </div>
+
   <div id="workGridView">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="studio">Studio Work</button>
-      <button class="filter-btn" data-filter="personal">Personal Work</button>
-      <button class="filter-btn" data-filter="album">Album Art</button>
-    </div>
-    <div class="filter-bar" id="filterBar">
     <div class="grid" id="projectGrid"></div>
   </div>
 
