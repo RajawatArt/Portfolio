@@ -56,6 +56,8 @@ const wagamama = createHelper("images/studio/wagamama");
 const phoenix = createHelper("images/studio/wizz");
 const procreate = createHelper("images/studio/procreate");
 const owlient = createHelper("images/studio/Elite_Squad");
+const watchmaker = createHelper("images/studio/Watchmaker");
+const heetch = createHelper("images/studio/Heetch");
 
 // ==================== PERSONAL WORK ====================
 const ghibli = createHelper("images/personal/ghibli");
@@ -68,6 +70,7 @@ const cyberpunk = createHelper("images/personal/Cyberpunk");
 const sketch = createHelper("images/personal/Sketch");
 const stilllife = createHelper("images/personal/Still_life");
 const northernlights = createHelper("images/personal/Northern_Lights");
+const doctorhouse = createHelper("images/personal/Doctor_House");
 
 
 // ==================== ALBUM ART ====================
@@ -423,10 +426,19 @@ const projects = [
     meta: "Macro photos Studies/'Flowers'/ — Procreate app",
     thumbnail: thumb("personal/Sketch","sketch43_flowers.jpg" ),
     images: [
-      sketch("sketch43_flowers.jpg",), sketch("sketch09_flowers.JPG",),
-      sketch("sketch11_flowers.JPG",), sketch("sketch12_flowers.JPG",)
+      sketch("sketch43_flowers.jpg",), sketch("sketch09_flowers.JPG",),sketch("Flowers_1mp.JPG",),
+      sketch("sketch11_flowers.JPG",), sketch("sketch12_flowers.JPG",), sketch("Flowers_2mp.JPG",),
+      sketch("Foliage_1mp.JPG",), sketch("Foliage_2mp.JPG",), sketch("Flowers_3mp.JPG",)
     ]
   },  
+  {
+    title: "Doctor House",
+    category: "personal",
+    images: [
+      doctorhouse("DoctorHouse.jpg",), doctorhouse("Process.jpg",), 
+      doctorhouse("rain_anim.gif",), doctorhouse("Process_anim.gif",)
+    ]
+  },
 {
     title: "Platform",
     category: "personal",
@@ -436,7 +448,7 @@ const projects = [
     ]
   },
 
-    {
+{
     title: "Marvel Midnight Suns: Salem Sisters",
     category: "studio",
     meta: "Background Paint — Sun Creature / 2K Games",
@@ -451,7 +463,7 @@ const projects = [
       midnight("Process_preview.gif", "Process Preview")
     ]
   },
-    {
+  {
     title: "Apex Legends- Stories from the Outlands – The Endorsement",
     category: "studio",
     meta: "Environment — Passion Animation/ Had a pleasure working on the new cinematic trailer made by Passion Pictures- UK under the direction of Mads Broni",
@@ -549,7 +561,30 @@ const projects = [
       booyah("Smoke_preview3.jpg", "Booyah Day")
     ]
   },
-
+  {
+    title: "The Watchmaker",
+    category: "studio",
+    meta: "Background Painting — Shotopop/ visit www.shotopop.com/watchmaker for full credit list",
+    thumbnail:thumb("studio/Watchmaker", "watchmaker_thumb.jpg"),
+    video: "https://vimeo.com/899786895",
+    images: [
+      watchmaker("watchmaker_house_int.jpg"), watchmaker("watchmaker_house_animatic.mp4"),
+      watchmaker("watchmaker_render_collage.png")
+    ]
+  },
+    {
+    title: "Heetch",
+    category: "studio",
+    meta: "Background Painting — Shotopop/ visit www.shotopop.com for full credit list",
+    thumbnail:thumb("studio/Heetch", "heetch_thumb.jpg"),
+    video: "https://www.youtube.com/embed/JxNkAD_ch9k?si=_tPWuon-ZNl_pb1V", 
+    video: "https://www.youtube.com/embed/hFMcC3dMaWo?si=iddQnP94OfbMyTRu",
+    images: [
+      heetch("heetch_club_entrance01.jpg"), heetch("heetch_club_entrance02.jpg"),
+      heetch("heetch_01.jpg"), heetch("heetch_02.jpg")
+    ]
+  },
+  
   {
     title: "Riot Domination",
     category: "studio",
@@ -581,22 +616,77 @@ const projects = [
     ]
   },
   {
-    title: "Lofi Girl- Album Art",
+    title: "Lofi Girl- Album Art Set-02",
     category: "album",
     
-    meta: "Album Art — replace with your own tile set",
+    meta: "Album Art",
+    thumbnail:thumb("album/lofiGirl", "Synthwave_D0D_Odyssey.jpg"),
+    images: [
+      lofigirl("TheSearchforPlanet_16_9.jpg", "The search for the Planet"),    
+      lofigirl("Synthwave_Temporal_Odyssey.jpg", "Synthwave- Temporal Odyssey"),
+      lofigirl("Synthwave_Fusion_of_worlds.jpg", "Synthwave- Fusion of the worlds"),
+      lofigirl("Synthwave_D0D_Odyssey.jpg", "Odyssey"),
+      lofigirl("Gpds_traveller.jpg", "Traveller v01"),
+      lofigirl("Gpds_traveller_v02.jpg", "Traveller v02"),
+      lofigirl("Starfield_lofiGirl.jpg", "Starfield"),
+      lofigirl("NoSpirit_BetweenWorlds.jpg", "No Spirit - Between Worlds"),
+      lofigirl("Drwamwalker_oscillations.jpg", "Oscillation")
+      ]
+  },
+    {
+    title: "Lofi Girl- Album Art Set-03",
+    category: "album",
+    
+    meta: "Album Art",
     thumbnail:thumb("album/lofiGirl", "FindingBeauty_islandinTheSky.jpg"),
     images: [
+      lofigirl("A_castle_in_the_Sky_Simon.jpg", "A Castle in the Sky"),
       lofigirl("FindingBeauty_islandinTheSky.jpg", "Finding Beauty"),
+      lofigirl("Tenno_MindTemple.jpg", "Tenno - Mind Temple"),
+      lofigirl("SolarBody_YOTD.jpg", "SolarBody- YOTD"),
+      lofigirl("Kabes_Dosi_wishes_and_Dreams.jpg", "WIshes and Dreams"),
+      lofigirl("Dimensions32_TheLegendOfOrpheus.jpg", "The Legend of the Orpheus"),
+      lofigirl("Sheathmusic_Realms_Unveiled_in_Reverie.jpg", "Realms Unveiled in Reverie"),
+      lofigirl("WishesAndDreams_Dreamland.jpg", "Wishes and Dreams- Dreamland")
+      
+      ]
+  },
+  
+    {
+    title: "Lofi Girl- Album Art Set 04",
+    category: "album",
+    
+    meta: "Album Art",
+    thumbnail:thumb("album/lofiGirl", "Goson_Dreamfield_albumArt.jpg"),
+    images: [
+      lofigirl("Goson_Dreamfield_albumArt.jpg", "Goson x Dreamfield - Dreams of Angels"),
+      lofigirl("Downtown_Binary_Album.jpg", "Downtown binary"),
+      lofigirl("Elijah_Casiio_Additions.jpg", "Additions"),
+      lofigirl("Leaving_this_Place.jpg", "Leaving This Place"),
+      lofigirl("8Lock_cafe.jpg", "Cafe"),
+      lofigirl("Dontcry_Atlantis.jpg", "Atlantis"),
+      lofigirl("Steezy_halfPastThree.jpg", "Half Past Three"),
+      lofigirl("LennyLoops_nitewalk_darkAmbient.jpg", "Night walk"),
+      lofigirl("Jazz_the_chilled.jpg", " Jazz Chilled"),
+      lofigirl("Journals_AER.jpg", "AER- Journals"),
+      lofigirl("Julian_Throne.jpg", "Throne"),
+      lofigirl("Downtown_Binary_rain.jpg", "Rain")
+      ]
+  },
+  
+  {
+    title: "Lofi Girl- Album Art Set-01",
+    category: "album",
+    meta: "Album Art",
+    thumbnail:thumb("album/lofiGirl", "Moving_On_Tibeauthetraveler.jpg"),
+    images: [
       lofigirl("Moving_On_Tibeauthetraveler.jpg", "Moving On by TibeautheTraveler"),
       lofigirl("Samsara_Eleven_AlbumArt.jpg", "samsara album by Eleven"),
       lofigirl("DaniSogen_TheMagicUnfolds.jpg", "DaniSogen - The Magic Unfolds"),
       lofigirl("Finding_Light.jpg", "Kainbeats - Finding Light"),
       lofigirl("MindeliqxNeeleHarder_NewHorizon.jpg", "Mindeliq x Neele Harder - New Horizon"),
       lofigirl("Yasumu_Unravel.jpg", "Yasumu - Unravel"),
-      lofigirl("Tenno_MindTemple.jpg", "Tenno - Mind Temple"),
       lofigirl("BcalmxBanks_Feelings.jpg", "Bcalm x Banks - Feelings"),
-      lofigirl("Goson_Dreamfield_albumArt.jpg", "Goson x Dreamfield - Dreams of Angels"),
       lofigirl("Amess_Dream.JPG", "Amess - A place above heaven"),
       lofigirl("LoafyBuilding_Butterflies.jpg", "Loafy Building - Butterflies"),
       lofigirl("tatami_construct_mommyhilfiger.jpg", "Tatami Construct- Mommy Hilfiger"),
@@ -604,29 +694,18 @@ const projects = [
       lofigirl("Krynoze_Himalaya.jpg", "Krynoze- Himalaya"),
       lofigirl("LoafyBuilding_HighFlying.JPG", "Loafy Building - High Flying"),
       lofigirl("Sun_Swells.jpg", "Sun Swells"),
-      lofigirl("NoSpirit_BetweenWorlds.jpg", "No Spirit - Between Worlds"),
       lofigirl("NaturesBeauty.jpg", "Nature's Beauty"),
-      lofigirl("Gpds_traveller.jpg", "Traveller"),
-      lofigirl("Journals_AER.jpg", "AER- Journals"),
-      lofigirl("Leaving_this_Place.jpg", "Leaving This Place"),
       lofigirl("Kainbeats_Atlantis.jpg", "Kainbeats - Atlantis"),
       lofigirl("outlander_massa.JPG", "l'Outlander - Massa"),
       lofigirl("tenderSpring.JPG", "tender spring - Springtime, with friends"),
       lofigirl("Celestial_ Alignment_Heading_Home.jpg", "Amess - Celestial Alignment-Heading Home"),
       lofigirl("SNUGxNuve_nightfall.JPG", "S N U G x Nuve- Nightfall"),
-      lofigirl("Gpds_traveller.jpg", "Traveller v01"),
-      lofigirl("Gpds_traveller_v02.jpg", "Traveller v02"),
       lofigirl("Henry_LoafyBuilding_0834.jpg", "Traveller"),
-      lofigirl("Jazz_the_chilled.jpg", " Jazz Chilled"),
-      lofigirl("Julian_Throne.jpg", "Throne"),
-      lofigirl("Kabes_Dosi_wishes_and_Dreams.jpg", "WIshes and Dreams"),
       lofigirl("Krynoze_medieval.jpg", "Medieval"),
-      lofigirl("LennyLoops_nitewalk_darkAmbient.jpg", "Night walk"),
       lofigirl("Living_Room_Asian.jpg", "Torii"),
       lofigirl("Luca_Verdant_Fragments.jpg", "Fragments"),
       lofigirl("Moving_On_Tibeauthetraveler.jpg", "Moving On"),
       lofigirl("NoSpirit_Sprintime.jpg", "Spring Time"),
-      lofigirl("A_castle_in_the_Sky_Simon.jpg", "A Castle in the Sky"),
       lofigirl("Amess_Dream.JPG", "Dream"),
       lofigirl("Asian_aftenoon_Nara.jpg", "Nara"),
       lofigirl("Asian_johnlee_korea.jpg", "Korea"),
@@ -636,30 +715,16 @@ const projects = [
       lofigirl("D0d_untold_stories_Medieval_.jpg", "Untold Stories"),
       lofigirl("DarkAmbient_sG.jpg", "Dark Ambient"),
       lofigirl("Dark_ambient_luvpug.jpg", "Dark ambient Luvpug"),
-      lofigirl("Dimensions32_TheLegendOfOrpheus.jpg", "The Legend of the Orpheus"),
-      lofigirl("Downtown_Binary_Album.jpg", "Downtown binary"),
-      lofigirl("Downtown_Binary_rain.jpg", "Rain"),
       lofigirl("Downtown_binary_norway_albumArt.jpg", "Norway"),
       lofigirl("Dreams_in_the_mist_krynoze.jpg", "Dream in the Mist"),
-      lofigirl("Drwamwalker_oscillations.jpg", "Oscillation"),
-      lofigirl("Elijah_Casiio_Additions.jpg", "Additions"),
       lofigirl("FredpaciMusic_MedievalLoFi.jpg", "FredPacimusic"),
       lofigirl("Seeyouthere_nitewalk.jpg", "See you there- Nitewalk"),
-      lofigirl("Sheathmusic_Realms_Unveiled_in_Reverie.jpg", "Realms Unveiled in Reverie"),
       lofigirl("Sleep_afternoon_SailboatAndConstellations.jpg", "Sailboat and Constellations"),
       lofigirl("Sleepermane_Habitual.jpg", "Habitual- Sleepermane"),
-      lofigirl("SolarBody_YOTD.jpg", "SolarBody- YOTD"),
-      lofigirl("Starfield_lofiGirl.jpg", "Starfield"),
-      lofigirl("Synthwave_D0D_Odyssey.jpg", "Odyssey"),
-      lofigirl("Synthwave_Fusion_of_worlds.jpg", "Synthwave- Fusion of the worlds"),
-      lofigirl("Synthwave_Temporal_Odyssey.jpg", "Synthwave- Temporal Odyssey"),
       lofigirl("Tenno_SleepWalker.jpg", "Tenno- Sleepwalker"),
-      lofigirl("TheSearchforPlanet_16_9.jpg", "The search for the Planet"),
       lofigirl("Traces_of_us_sleepSteezy.jpg", "SleepSteezy- Traces of Us"),
-      lofigirl("WishesAndDreams_Dreamland.jpg", "Wishes and Dreams- Dreamland"),
       lofigirl("Wistful_grove_hotpotstoes.jpg", "Hotpotstoes- Wishful grove"),
       lofigirl("Gpds_travellepg", "Traveller")
-        
     ]
   },
   
@@ -685,7 +750,8 @@ const projects = [
       photostudy("normalpeople.JPG", ), photostudy("kyoto_train.JPG", ), photostudy("udaipur_palace.JPG", ),
       photostudy("hongkong.JPG", ), photostudy("tokyo_dome.JPG", ), photostudy("taxi.JPG", ),
       photostudy("tokyo_palace.JPG", ), photostudy("rohtang_pass.JPG", ), photostudy("nubra_valley_leh.JPG", ),
-      photostudy("himeji_castle.JPG", ), photostudy("hokora.JPG", ), photostudy("kyoto_02.JPG", ),
+      photostudy("himeji_castle.JPG", ), photostudy("Winter_rising.jpg", ),photostudy("Stairs.jpg", ),
+      photostudy("hokora.JPG", ), photostudy("kyoto_02.JPG", ),
       photostudy("kyoto_03.JPG", ), photostudy("kyoto_04.JPG", ), photostudy("kyoto_teashop.JPG", ),
       photostudy("kyoto_train.JPG", ), photostudy("leh_monastery.JPG", ), photostudy("snow_monkey_path.JPG", ),
       photostudy("oahara_03.JPG", ), photostudy("oahara_01.JPG", ), photostudy("oahara_04.JPG", ),
@@ -711,8 +777,7 @@ const projects = [
     layout: "tiles",
     images: [
       sketch("sketch02_tree.JPG", ), sketch("sketch05_forest.JPG", ), sketch("sketch16_torii.JPG",),
-      sketch("sketch07_bridge.JPG",), sketch("sketch08_clouds.JPG", ), sketch("sketch09_flowers.JPG",),
-      sketch("sketch10_flowers.JPG",), sketch("sketch11_flowers.JPG", ), sketch("sketch12_flowers.JPG",),
+      sketch("sketch07_bridge.JPG",), sketch("sketch08_clouds.JPG", ), sketch("Grapes.JPG",),
       sketch("sketch13_doors.JPG",), sketch("sketch15_kerala.JPG", ), sketch("sketch17_kerala.JPG",),
       sketch("sketch18_village.JPG",), sketch("sketch19_beach.JPG", ), sketch("sketch20_beach.JPG",),
       sketch("sketch21_beach.JPG",), sketch("sketch22_himeji.jpg", ), sketch("sketch14_windmill.JPG",),
@@ -730,8 +795,11 @@ const projects = [
     category: "personal",
     meta: "Northern Lights on Procreate app/",
     images: [
-      northernlights("Northern_Lights.JPG",), northernlights("Winter_Night_HR.jpg",  ), northernlights("Dancing_Night_web.jpg", ),
-      northernlights("Northern_lights_web.jpg", )
+      northernlights("Northern_Lights.JPG",), lofigirl("Downtown_binary_norway_albumArt.jpg"),
+      northernlights("Winter_Night_HR.jpg",  ), lofigirl("SNUGxNuve_nightfall.JPG"),
+      northernlights("Dancing_Night_web.jpg", ), northernlights("Northern_lights_web.jpg", ), 
+      northernlights("northernlight_Dream.JPG", ) , lofigirl("Celestial_ Alignment_Heading_Home.jpg")
+      
     ]
   }, 
   
@@ -755,13 +823,24 @@ const projects = [
       sketch("Goa/Goa03.jpg", ), sketch("Goa/Goa05.jpg", ), sketch("Goa/Goa06.jpg", )
     ]
   }, 
-  {
-    title: "Still Life",
+    {
+    title: "The Legend of Zelda-Fan Art ",
     category: "personal",
-    meta: "Still life Study on Procreate app/",
+    meta: "Done on Procreate app",
     images: [
-      stilllife("Grapes.JPG",), stilllife("Untitled_still_life.JPG",  ), stilllife("Still_life_sketch.JPG", ),
-      stilllife("Still_life_02.JPG", ), stilllife("Still_life_01.JPG", ), stilllife("Flower.JPG", )
+      sketch("Sketch_The_Legend_of_Zelda_web.JPG",)
+    ]
+  }, 
+  {
+    title: "Sketches set02",
+    category: "personal",
+    meta: "Sketches on Procreate app/",
+    layout: "tiles",
+    images: [
+      sketch("Bayon_Temple.JPG", ), sketch("Ashok_Stambh_HR.JPG",), sketch("Ruins.JPG", ), 
+      sketch("Sketch_cycle.jpg", ), sketch("Sketch_Uncharted.JPG",), sketch("Sketch_Waterfall_web.jpg", ), 
+      sketch("Sketch_Treexx.JPG", ), sketch("Sketch_Beautiful_Day.JPG",), sketch("Alone_time_sunset.jpg", ), 
+      sketch("Giant_tree.jpg", ), sketch("sketch_pond.JPG", ), sketch("Sketch_near_the_lake.jpg", )
     ]
   }, 
   
@@ -821,8 +900,9 @@ const projects = [
       ncis("NCIS_PizzaShop.jpg","Pizza Shop"), ncis("NCIS_postoffice.jpg","Post Office"),
       ncis("NCIS_SafeHouse.jpg","Safe House"), ncis("NCIS_Studio_apt.jpg","Studio Apartment"),
       ncis("NCIS_map_assets01.jpg","Map Assets"), ncis("NCIS_map_assets02.jpg","Map Assets"),
-      
-      ncis("NCIS_map_assets03.jpg","Map Assets")   
+      ncis("NCIS_map_assets03.jpg","Map Assets"),
+      ncis("NCIS_avatar_shop_bg.jpg","Avatar Shop"), ncis("NCIS__cutscenes_interrogation.jpg","Interrogation Room"),
+      ncis("NCIS_avatar_shop_menu.jpg","Avatar Shop menu"), ncis("NCIS_cutscenes_interrogation_menu.jpg","Interrogation menu")
     ]
   },
    {
