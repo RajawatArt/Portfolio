@@ -58,6 +58,9 @@ const procreate = createHelper("images/studio/procreate");
 const owlient = createHelper("images/studio/Elite_Squad");
 const watchmaker = createHelper("images/studio/Watchmaker");
 const heetch = createHelper("images/studio/Heetch");
+const supercell = createHelper("images/studio/Supercell");
+const royalkingdom = createHelper("images/studio/Royal_Kingdom");
+
 
 // ==================== PERSONAL WORK ====================
 const ghibli = createHelper("images/personal/ghibli");
@@ -348,7 +351,84 @@ const projects = [
       wagamama("Wagamama_SC18.jpg", "Restaurant Int")
     ]
   },
-  
+    {
+    title: "Dream- Royal Kingdom Adventures",
+    category: "studio",
+    meta: " background paintings for multiple films of royal kingdom- Adsventures series — Passion Pictures/ Dream Games",
+    thumbnail: thumb("studio/Royal_Kingdom", "RK_project_thumb01.jpg"),
+    videos: [
+      "https://www.youtube.com/embed/I4nimLe7oU8?si=Sb-Vyp1YjRhw7pcg"
+    ],
+    images: [
+      royalkingdom("Film01_shot01.jpg", "Episode 2: Dark King's Plan"),
+      royalkingdom("Film01_shot02.jpg", "Episode 2: Dark King's Plan"),
+      royalkingdom("Film01_shot03.jpg", "Episode 2: Dark King's Plan"),
+      royalkingdom("Film01_shot04.jpg", "Episode 2: Dark King's Plan"),
+      royalkingdom("Film01_shot05.jpg", "Episode 2: Dark King's Plan"),
+      royalkingdom("Film01_shot05_preview.mp4", "preview"),
+      royalkingdom("Film01_shot05_top_crop.jpg", "Episode 2: Dark King's Plan"),
+      royalkingdom("Film01_shot05_top_crop_bottom.jpg", "Episode 2: Dark King's Plan"),
+      royalkingdom("Film01_shot05_top_crop_process.gif", "Process")
+    ]
+  },
+        {
+    title: "Dream- Royal Kingdom Adventures",
+    category: "studio",
+    meta: " background paintings for Royal kingdom- Frosty Voyage — Passion Pictures/ Dream Games",
+    thumbnail: thumb("studio/Royal_Kingdom", "RK_project_thumb02.jpg"),
+    videos: [
+      "https://www.youtube.com/embed/vJSyOp-JB7A?si=rsn1ellOy5I9Mjaa"     
+    ],
+    images: [
+      royalkingdom("Film02_cloud_BG.jpg", "Episode 8: Frosty Voyage"),
+      royalkingdom("Film02_shot01.jpg", "Episode 8: Frosty Voyage"),
+      royalkingdom("Film02_shot02.jpg", "Episode 8: Frosty Voyage"),
+      royalkingdom("Film02_Process_Preview.gif", "Background Painting Process")
+    ]
+  },
+      {
+    title: "Dream- Royal Kingdom Adventures",
+    category: "studio",
+    meta: " background paintings for Royal kingdom- Ballon Tourble and The Trap — Passion Pictures/ Dream Games",
+    thumbnail: thumb("studio/Royal_Kingdom", "RK_project_thumb03.jpg"),
+    videos: [
+      "https://www.youtube.com/embed/aQpbOhGEfxc?si=psx3VSeTMhHEhVqP",
+      "https://www.youtube.com/embed/imnZ2YSOmM8?si=1ZHZbqp9iswqHjKR"      
+    ],
+    images: [
+      royalkingdom("Film04_Bal_Sand.jpg", "Episode 9: Balloon Trouble"),
+      royalkingdom("Film03_shot01.jpg", "Episode 3: The Trap"),
+      royalkingdom("Film03_shot02.jpg", "Episode 3: The Trap"),
+      royalkingdom("Film03_shot02_preview.mp4", "preview"),
+      royalkingdom("Film03_shot03.jpg", "Episode 3: The Trap")
+      
+    ]
+  },
+  {
+    title: "Supercell- Clash of Clans / Clash Royale",
+    category: "studio",
+    meta: " background paintings for multiple project — Axis Studio/ Supercell",
+    thumbnail: thumb("studio/Supercell", "coc_capital_thumb.jpg"),
+    videos: [
+      "https://www.youtube.com/embed/YWQjWdQ6tOA?si=SJxd-uPMx8F6e0n6",
+      "https://www.youtube.com/embed/DDY6KjQCMoQ?si=v5U-08kgmSpwjGxZ" 
+    ],
+    images: [
+      supercell("coc_capital_concept01.jpg", "COC-Clan Capital"),
+      supercell("coc_capital_concept02.jpg", "COC- Clan Capital"),
+      supercell("COC_Haaland_Sky_DMP04.jpg", "COC- Erling Haaland"),
+      supercell("COC_Haaland_Sky_DMP03.jpg", "COC- Erling Haaland"),
+      supercell("COC_Haaland_Skydome_DMP02.jpg", "COC- Erling Haaland"),
+      supercell("COC_Haaland_Sky_DMP05.jpg", "COC- Erling Haaland"),
+      supercell("COC_Haaland_Skydome_DMP03.jpg", "COC- Erling Haaland"),
+      supercell("COC_Haaland_Sky_DMP01.jpg", "COC- Erling Haaland"),
+      supercell("CR_Chess_sky_bg01.jpg", " Clash Royale: Chess"),
+      supercell("CR_Chess_sky_bg02.jpg", " Clash Royale: Chess"),
+      supercell("CR_Clip01.mp4", " Haaland"),
+      supercell("CR_Clip02.mp4", " Haaland"),
+      supercell("CR_Clip03.mp4", " Haaland")
+    ]
+  },
     {
     title: "The Unknown",
     category: "personal",
