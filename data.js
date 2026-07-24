@@ -267,7 +267,7 @@ const projects = [
     title: "Background art-'Start Counting' Chobani Probiotic",
     category: "studio",
     meta: "Environment — The Line Animation Studio / Director by Bjørn-Erik Aschim / Art Direction by Pedro Antoine / concept art by: Chiara Benedetti",
-    thumbnail: thumb("studio/Chobani", "chobani_kitchen_02.jpg"),
+    thumbnail: thumb("studio/Chobani", "chobani_kitchen_thumb.jpg"),
     video: "https://www.youtube-nocookie.com/embed/xWMJU-WFTxQ?rel=0",
     images: [
       chobani("chobani_kitchen_02.jpg", "Kitchen Modern"),
@@ -279,7 +279,7 @@ const projects = [
     category: "personal",
     meta: "Background painting — Procreate app",
     layout: "tiles",
-    thumbnail: thumb("personal/ghibli", "ghilbi_spritedAway.jpg"),
+    thumbnail: thumb("personal/ghibli", "ghilbi_spritedAway_thumb.jpg"),
     images: [
       ghibli("ghilbi_spritedAway.jpg", "Spirited Away"),
       ghibli("ghibli_MyNeighbourTotoro01.jpg", "My Neighbour totoro"),
@@ -296,9 +296,10 @@ const projects = [
     ]
   },
 {
-    title: "Trees",
+    title: "Tree",
     category: "personal",
     meta: " done in Procreate app",
+  thumbnail: thumb("personal/Sketch", "sketch01_tree_thumb.jpg"),
     images: [
       sketch("sketch01_tree.JPG",)
       ]
@@ -307,6 +308,7 @@ const projects = [
     title: "Moss",
     category: "personal",
     meta: " done in Procreate app",
+     thumbnail: thumb("personal/Sketch", "sketch03_moss_thumb.jpg"),
     images: [
        sketch("sketch03_moss.JPG",), sketch("sketch04_rocks.JPG",)
       ]
@@ -315,7 +317,7 @@ const projects = [
     title: "Ghost of Yotie — Fan Art",
     category: "personal",
     meta: "Fan Art — GOY Artbook, Sony PlayStation Germany",
-    thumbnail: thumb("personal/ghost_of_yotie", "goy_ride.jpg"),
+    thumbnail: thumb("personal/ghost_of_yotie", "goy_ride_thumb.jpg"),
     images: [
       goy("goy_ride.jpg", "Ride"),  goy("goy_duel.jpg", "Duel"), goy("goy_mountain.jpg", "Rest"),
       goy("goy_onsen.jpg", "Onsen"), goy("goy_bookpage.jpg", "book"), goy("goy_book.jpg", "book")
@@ -324,6 +326,7 @@ const projects = [
   {
     title: "The Unknown",
     category: "personal",
+    thumbnail: thumb("personal/Sketch", "The_Unkown_thumb.jpg"),
     images: [
       sketch("The_Unkown.jpg", "The Unknown")
     ]
@@ -432,6 +435,7 @@ const projects = [
     {
     title: "The Unknown",
     category: "personal",
+      thumbnail: thumb("personal/Sketch", "meeting_place01_thumb.jpg"),
     images: [
       sketch("meeting_place01.jpg",), sketch("meeting_place02.jpg",)
     ]
@@ -441,7 +445,7 @@ const projects = [
     title: "Raimu: Album Art",
     category: "album",
     meta: "Album art for lofi music albums by Raimu",
-     thumbnail: thumb("album/Raimu", "Raimuforest.jpg"),
+     thumbnail: thumb("album/Raimu", "Raimuforest_thumb.jpg"),
     images: [
       raimu("Raimuforest.jpg", "Forest" ), raimu("Raimu_torii.jpg", "Raimu Torii" ),
     ]
@@ -451,7 +455,7 @@ const projects = [
     title: "Syncron x Ohtani",
     category: "studio",
     meta: "Environment — Mana Animation",
-    thumbnail: thumb("studio/syncron", "MVU_StadiumExt_CleansingIsle.jpg"),
+    thumbnail: thumb("studio/syncron", "mana_syncron_thumb.jpg"),
     videos: [
       "https://youtu.be/Zu_1_Sd8aCk", "https://youtu.be/jk4wEnN98ko",
       "https://youtu.be/iXe6N4cvsCY", "https://youtu.be/vjT4sz6THdU"
@@ -467,6 +471,7 @@ const projects = [
     title: "Backyard",
     category: "personal",
     meta: " Backyard shot practice from /'My Neighbour Totoro' / done in Procreate app",
+     thumbnail: thumb("personal/ghibli", "ghibli_mnt_backyard01_thumb.jpg"),
     images: [
       ghibli("ghibli_mnt_backyard01.jpg","Day time",),ghibli("ghibli_mnt_backyard02.jpg","Night time"),
       ghibli("ghibli_mnt_backyard03.jpg","Raining"),ghibli("ghibli_mnt_backyard_anim.gif","preview")
@@ -641,6 +646,19 @@ const projects = [
       booyah("Smoke_preview3.jpg", "Booyah Day")
     ]
   },
+      {
+    title: "Truth Initiative-'Adult Swim'",
+    category: "studio",
+    meta: "Background Painting — Mana TV/ Some backgrounds that I did with the team at Mana Studio for the anime style commercial by Truth Initiative and Adult Swim.",
+    thumbnail: thumb("studio/adultswim", "adultswim_thumb.jpg"),
+ videos: [
+      "https://vimeo.com/722805416?fl=pl&fe=sh"
+    ],
+    images: [
+      adultswim("truth_initiative_01.jpg"), adultswim("truth_initiative_02.jpg"),
+      adultswim("truth_initiative_03.jpg"), adultswim("truth_initiative_04.jpg"), adultswim("truth_initiative_05.jpg")
+      ]
+      },
   {
     title: "The Watchmaker",
     category: "studio",
@@ -656,9 +674,10 @@ const projects = [
     title: "Heetch",
     category: "studio",
     meta: "Background Painting — Shotopop/ visit www.shotopop.com for full credit list",
-    thumbnail:thumb("studio/Heetch", "heetch_thumb.jpg"),
-    video: "https://www.youtube.com/embed/JxNkAD_ch9k?si=_tPWuon-ZNl_pb1V", 
-    video: "https://www.youtube.com/embed/hFMcC3dMaWo?si=iddQnP94OfbMyTRu",
+    thumbnail: thumb("studio/Heetch", "heetch_thumb.jpg"),
+ videos: [
+      "https://www.youtube.com/embed/JxNkAD_ch9k?si=_tPWuon-ZNl_pb1V", "https://www.youtube.com/embed/hFMcC3dMaWo?si=iddQnP94OfbMyTRu"
+    ],
     images: [
       heetch("heetch_club_entrance01.jpg"), heetch("heetch_club_entrance02.jpg"),
       heetch("heetch_01.jpg"), heetch("heetch_02.jpg")
@@ -970,7 +989,7 @@ const projects = [
     title: "NCIS: Hidden Crimes",
     category: "hog",
     meta: "Hidden Objects background and assets for NCIS: Hiiden Crimes",
-    thumbnail: thumb("studio/Hidden_Objects_Games/NCIS", "NCIS_AbbysLab.jpg"),
+    thumbnail: thumb("studio/Hidden_Objects_Games/NCIS", "NCIS_thumb.jpg"),
     images: [
       ncis("NCIS_AbbysLab.jpg","Abby's Lab"), ncis("NCIS_AirShow.jpg","airshow"),
       ncis("NCIS_BaggageClaim.jpg","baggage Claim"), ncis("NCIS_DroneLab.jpg","Drone Lab"),
@@ -989,7 +1008,7 @@ const projects = [
     title: "CSI: Hidden Crimes",
     category: "hog",
     meta: "Hidden Objects background and assets for CSI: Hiiden Crimes",
-     thumbnail: thumb("studio/Hidden_Objects_Games/CSI", "CSI_backalley.jpg"),
+     thumbnail: thumb("studio/Hidden_Objects_Games/CSI", "csi_thumb.jpg"),
     images: [
       csi("CSI_backalley.jpg","Abby's Lab"), csi("CSI_halloween.jpg","airshow"),
       csi("CSI_banqouet_hall.jpg","baggage Claim"), csi("CSI_living_room.jpg","Drone Lab"),
@@ -1004,7 +1023,7 @@ const projects = [
     title: "Playdom: Hidden Objects Games",
     category: "hog",
     meta: "Hidden Objects background and assets for multiple hidden Objects game by Playdom",
-     thumbnail: thumb("studio/Hidden_Objects_Games", "Aftermath.jpg"),
+     thumbnail: thumb("studio/Hidden_Objects_Games", "HOG_thumb01.jpg"),
     images: [
       playdom("Aftermath.jpg","Abby's Lab"), playdom("Baoan_Temple.jpg","airshow"),
       playdom("Airship_Door.jpg","baggage Claim"), playdom("Bo_Kaap.jpg","Drone Lab"),
